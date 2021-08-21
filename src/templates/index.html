@@ -7,6 +7,12 @@
     <title>MikelGaldosVargas</title>
 </head>
 <body>
-    <h1>Mikel</h1>
+    {% include 'snippets/header.html' %}
+    <div class="main">
+        <h1>Mikel</h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include 'snippets/footer.html' %}
 </body>
 </html>
