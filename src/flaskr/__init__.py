@@ -1,8 +1,5 @@
-from flask import Flask
-
+from flask import Flask, Blueprint, render_template, redirect
 import os
-
-from flask.templating import render_template
 
 
 def create_app(test_config=None):
