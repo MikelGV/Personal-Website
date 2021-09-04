@@ -5,4 +5,4 @@ from flask import (Blueprint,
                     request, url_for)
 import functools
 
-bp = Blueprint('app', __name__, url_prefix='/app')
+bp = Blueprint('main', __name__, url_prefix='/main')
