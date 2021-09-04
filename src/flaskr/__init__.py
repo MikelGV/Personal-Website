@@ -1,5 +1,7 @@
-from flask import Flask, Blueprint, render_template, redirect
+from flask import Flask, render_template
 import os
+
+import app
 
 
 def create_app(test_config=None):
@@ -9,6 +11,8 @@ def create_app(test_config=None):
         SECRET_KEY="dev",
         DATABASE= os.path.join(app.instance_path, "flaskr.sqliter"),
     )
+    # Register the blueprint
+    app.register_blueprint(app.bp)
 
     if test_config is None:
         # Load the instance config, if it exists, when not testing
