@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import os
 
-import app
+from . import main
 
 
 def create_app(test_config=None):
@@ -12,7 +12,7 @@ def create_app(test_config=None):
         DATABASE= os.path.join(app.instance_path, "flaskr.sqliter"),
     )
     # Register the blueprint
-    app.register_blueprint(app.bp)
+    app.register_blueprint(main.bp)
 
     if test_config is None:
         # Load the instance config, if it exists, when not testing
@@ -29,6 +29,6 @@ def create_app(test_config=None):
 
     @app.route('/')
     def home():
-        return render_template("index.html")
+        return render_template("/app/index.html")
     
     return app
