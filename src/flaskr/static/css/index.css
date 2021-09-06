@@ -1,0 +1,25 @@
+.c-hero {
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+    padding-top: 95px;
+}
+.c-hero__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-hero__title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: -1.5px;
+    line-height: 110%;
+    margin: 0;
+    transition: all .2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .u-d-block\@md {
+        display: block!important
+    }
+}
