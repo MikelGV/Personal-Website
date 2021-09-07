@@ -28,6 +28,13 @@
     justify-content: space-between;
 }
 
+.o-flexy__item {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+}
+
+
 ul {
     margin-block-start: 1em;
     margin-block-end: 1em;
