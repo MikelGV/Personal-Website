@@ -1,0 +1,37 @@
+.s-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1040;
+}
+
+.c-nav {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.c-nav-list {
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    max-width: 90%;
+}
+
+.o-flexy--top {
+    align-items: flex-start;
+}
+.o-flexy {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
