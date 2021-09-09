@@ -42,3 +42,9 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
+
+@media (min-width: 768px) {
+    .c-nav-list__item+.c-nav-list__item{
+        margin-left: 10px;
+    }
+}
