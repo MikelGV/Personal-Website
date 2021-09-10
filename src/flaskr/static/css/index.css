@@ -1,25 +1,41 @@
-.c-hero {
-    overflow: hidden;
-    position: relative;
-    z-index: 1000;
-    padding-top: 95px;
-}
-.c-hero__box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.c-hero__title {
+h1 {
+    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: -1.5px;
-    line-height: 110%;
+    letter-spacing: 1px;
+}
+  
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: rgb(50, 50, 50);
+    background: url(https://doninmass.files.wordpress.com/2013/04/walking-in-rain-painting-wallpaper-hd.jpg) no-repeat 50% 50% fixed;
+    background-size: 130%;
+    overflow: hidden;
+}
+  
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: .3em;
+    font-size: 3em;
+    font-weight: lighter;
+}
+  
+.content-wrapper {
+    width: 80%;
+    height: 3000px;
+    padding: 1em 10%;
+}
+  
+.content-wrapper h1 {
     margin: 0;
-    transition: all .2s ease-in-out;
-}
-
-@media (min-width: 768px) {
-    .u-d-block\@md {
-        display: block!important
-    }
-}
+    color: rgb(220, 120, 0);
+  }
+  
+.content-wrapper p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-indent: 1.5em;
+  }
