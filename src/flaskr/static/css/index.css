@@ -4,7 +4,7 @@ h1 {
     letter-spacing: 1px;
 }
   
-.hero {
+.nav {
     position: relative;
     width: 100%;
     height: 500px;
@@ -14,7 +14,7 @@ h1 {
     overflow: hidden;
 }
   
-.hero h1 {
+.nav h1 {
     position: absolute;
     top: 50%;
     left: 0;
@@ -37,5 +37,4 @@ h1 {
   
 .content-wrapper p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-indent: 1.5em;
   }
