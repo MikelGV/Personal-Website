@@ -9,7 +9,7 @@ h1 {
     width: 100%;
     height: 500px;
     background: rgb(50, 50, 50);
-    background: url(https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.thespainscoop.com%2Fmuseums-bilbao%2F&psig=AOvVaw2-xYKKCk8vBeRewhmhb4qi&ust=1631354710231000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCNCj94OU9PICFQAAAAAdAAAAABAJ) no-repeat 50% 50% fixed;
+    background: url() no-repeat 50% 50% fixed;
     background-size: 130%;
     overflow: hidden;
 }
