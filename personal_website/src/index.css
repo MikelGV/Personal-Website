@@ -50,7 +50,12 @@ h4 {
 }
 .aboutsection {
   background-color: #191919;
+  height: 500px;
 }
+.popular {
+  height: 500px;
+}
+
 .center {
   position: absolute;
   top: 50%;
@@ -136,11 +141,6 @@ nav a {
 nav a:hover {
   color: rgb(220, 120, 0);
 }
-#global-nav {
-  height: 120px;
-  transition: height 5.s, inline-height .5s;
-}
-
 .fixed-top {
   position: fixed;
   top: 0;
@@ -158,6 +158,20 @@ nav a:hover {
   top: 0;
   opacity: 1;
 }
+@media(min-widht: 922px){
+  #global-nav {
+    height: 120px;
+    -webkit-transition: height .5s, line-height .5s;
+    transition: height .5s, line-height .5s;
+  }
+  .scrolled-nav {
+    background-color: white;
+    height: 60px !important;
+    line-height: 60px;
+    padding: 0px;
+  }
+}
+
 
 /*Footer*/
 .footer {
