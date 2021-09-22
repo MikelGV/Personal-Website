@@ -1,13 +1,167 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*Body*/
+h1 {
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.h1, h1{
+  font-size: 2.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+div {
+  display: block;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  text-align: center;
+}
+.plainLink, .plainLink:hover {
+  color: inherit;
+  touch-action: manipulation;
+}
+
+.table {
+  width: 500%;
+  max-width: 50%;
+  margin: auto;
+  background-color: transparent;
+}
+
+.Image {
+  height: 1000px;
+  background: url('image/background.jpeg');
+  background-size: 130%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutsection {
+  background-color: #191919;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.titleMain {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 15px;
+}
+
+.content-wrapper {
+  margin: auto;
+  width: 80%;
+  height: 350px;
+  padding: 1em 10%;
+}
+
+.content-wrapper h1 {
+  margin: 0;
+  color: white;
+}
+
+.content-wrapper p {
+  color: white;
+}
+/*Utils*/
+.main {
+  min-height: 50vh;
+  height: 50%;
+}
+.head{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 380;
+}
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 380;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  
+}
+/*Header*/
+nav {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: .2em 2em;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: .2em .7em;
+}
+
+nav a {
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  transition: .25s ease-in-out;
+}
+
+nav a:hover {
+  color: rgb(220, 120, 0);
+}
+#global-nav {
+  height: 120px;
+  transition: height 5.s, inline-height .5s;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.bg-hidden {
+  top: -100%;
+  opacity: 0;
+}
+
+.bg-visible {
+  top: 0;
+  opacity: 1;
+}
+
+/*Footer*/
+.footer {
+  min-height: 100px;
+  color: white;
+  background-color: #282828;
 }
