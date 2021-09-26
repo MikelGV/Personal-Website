@@ -1,32 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
+} from "react-router-dom"
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 class Header extends React.Component {
 	render() {
 		return (
-			<div>
-				<nav id="gobla-nav" className="navbar navbar-expand-lg fixed-top scrolled-nav">
-					<div className="container">
-						<div className="collapse navbar-collapse scrollN unscrolledLink">
-						<ul>
-							<li><a href="/">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="/software">Software</a></li>
-							<li><a href="/gear">Gear</a></li>
-						</ul>
-						<div className="d-flex flex-row-reverse flex-grow-1">
-								<ul>
+			<Router>
+				<div>
+					<nav id="gobla-nav" className="navbar navbar-expand-lg fixed-top scrolled-nav">
+						<div className="container">
+							<div className="collapse navbar-collapse scrollN unscrolledLink">
+							<ul>
 								<li>
-									<a href="/contact">Contact</a>
+									<Link to="/">Home</Link>
 								</li>
-								</ul>
+								<li><a href="#about">About</a></li>
+								<li>
+									<Link to="/software">Software</Link>
+								</li>
+								<li>
+									<Link to="/gear">Gear</Link>
+								</li>
+							</ul>
+							<div className="d-flex flex-row-reverse flex-grow-1">
+									<ul>
+									<li>
+										<Link to="/contact">Contact</Link>
+									</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-				</nav>
-			</div>
+					</nav>
+				</div>
+			</Router>
 		)
 	}
 }
