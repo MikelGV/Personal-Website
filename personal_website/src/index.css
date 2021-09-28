@@ -48,7 +48,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.aboutsection {
+.worksection {
   background-color: #191919;
   height: 500px;
 }
@@ -179,3 +179,14 @@ nav a:hover {
   color: white;
   background-color: #282828;
 }
+
+/*Software tab*/
+
+.softwareDiv {
+  background:white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Gear tab*/
