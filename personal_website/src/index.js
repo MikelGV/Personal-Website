@@ -26,7 +26,7 @@ function Header() {
 								<Link to="/software">Software</Link>
 							</li>
 							<li>
-								<Link to="/gear">Gear</Link>
+								<Link to="/blog">blog</Link>
 							</li>
 						</ul>
 						<div className="d-flex flex-row-reverse flex-grow-1">
@@ -133,7 +133,7 @@ function Software() {
 	)
 }
 
-function Gear() {
+function Blog() {
 	return(
 		<div>
 			<h1>Gear</h1>
@@ -166,7 +166,7 @@ class App extends React.Component {
 				<Switch>
 					<Route path="/" exact component={Home}/>
 					<Route path="/software" component={Software}/>
-					<Route path="/gear" component={Gear} />
+					<Route path="/blog" component={Blog} />
 					<Route path="/about" component={AboutMe} />
 					<Route path="/contact" component={Contact} />
 				</Switch>
