@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -11,40 +11,39 @@ import reportWebVitals from './reportWebVitals';
 
 function Header() {
 	return (
-		<Router>
-			<div>
-				<nav id="gobla-nav" className="navbar navbar-expand-lg fixed-top scrolled-nav">
-					<div className="container">
-						<div className="collapse navbar-collapse scrollN unscrolledLink">
-							<ul>
+		<div>
+			<nav id="gobla-nav" className="navbar navbar-expand-lg fixed-top scrolled-nav">
+				<div className="container">
+					<div className="collapse navbar-collapse scrollN unscrolledLink">
+						<ul>
+							<li>
+								<Link to="/">Home</Link>
+							</li>
+							<li>
+								<Link to="/about">About Me</Link>
+							</li>
+							<li>
+								<Link to="/software">Software</Link>
+							</li>
+							<li>
+								<Link to="/gear">Gear</Link>
+							</li>
+						</ul>
+						<div className="d-flex flex-row-reverse flex-grow-1">
+								<ul>
 								<li>
-									<Link to="/">Home</Link>
+									<Link to="/contact">Contact</Link>
 								</li>
-								<li><a href="#about">About</a></li>
-								<li>
-									<Link to="/software">Software</Link>
-								</li>
-								<li>
-									<Link to="/gear">Gear</Link>
-								</li>
-							</ul>
-							<div className="d-flex flex-row-reverse flex-grow-1">
-									<ul>
-									<li>
-										<Link to="/contact">Contact</Link>
-									</li>
-									</ul>
-							</div>
+								</ul>
 						</div>
 					</div>
-				</nav>
-			</div>
-		</Router>
+				</div>
+			</nav>
+		</div>
 	)
 }
 
 function Footer() {
-	
 	return(
 		<div className="d-flex flex-row align-items-center footer shadow-lg mt-4">
 			<p className="m-auto">Stay Connected</p>
@@ -52,12 +51,11 @@ function Footer() {
 	)
 }
 
-function AboutMe()  {
-	
+function MyWork()  {
 	return(
-		<div className="aboutsection">
-			<div id="about" className="content-wrapper">
-				<h1>About me</h1>
+		<div className="worksection">
+			<div className="content-wrapper">
+				<h1>My work</h1>
 				<p>I've always sought out opportunities and challenges that are meaningful to me. I've never stopped engaging my passion to 
 					help others and solve problems. As a Software developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my
 					mission-driven work ethic to literally change the world. That's why I'm excited to make big impact at a high growth company.
@@ -107,13 +105,10 @@ function PopularProjects(){
 	)
 	
 }
-
-
-class App extends React.Component {
-	render () {
-		return (
+function Home() {
+	return(
+		<Router>
 			<div className='main'>
-				<Header/>
 				<div className='Image'>
 					<div className='center arial'>
 						<h1 className='titleMain'>Mikel Galdos</h1>
@@ -122,10 +117,60 @@ class App extends React.Component {
 						</h5>
 					</div>
 				</div>
-				<AboutMe/>
-				<PopularProjects/>
-				<Footer/> 
 			</div>
+			<MyWork/>
+			<PopularProjects/>
+			<Footer/> 
+		</Router>
+	)
+}
+// other tabs
+function Software() {
+	return(
+		<div className="softwareDiv">
+			<h1>Software</h1>
+		</div>
+	)
+}
+
+function Gear() {
+	return(
+		<div>
+			<h1>Gear</h1>
+		</div>
+	)
+}
+
+function AboutMe() {
+	return(
+		<div>
+			<h1>About Me</h1>
+		</div>
+	)
+}
+
+function Contact() {
+	return(
+		<div>
+			<h1>Contact</h1>
+		</div>
+	)
+}
+
+// Main app
+class App extends React.Component {
+	render () {
+		return (
+			<Router>
+				<Header/>
+				<Switch>
+					<Route path="/" exact component={Home}/>
+					<Route path="/software" component={Software}/>
+					<Route path="/gear" component={Gear} />
+					<Route path="/about" component={AboutMe} />
+					<Route path="/contact" component={Contact} />
+				</Switch>
+			</Router>
 		)
 	}
 }
