@@ -112,9 +112,16 @@ function PopularProjects(){
 							</tr>
 							<tr>
 								<td>
-									<a href="https://github.com/MikelGV/SudokuSolver" className="plainLink">SudokuSolver</a>
+									<a href="https://github.com/MikelGV/SudokuSolver" className="plainLink">Sudoku Solver</a>
 								</td>
 								<td>Sudoku game using pygame and using backtracking algorithm to solve the sudoku</td>
+								<td>Python</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://github.com/MikelGV/WeatherApp" className="plainLink">Weather App</a>
+								</td>
+								<td>Weather app build in flask using the openWeather API</td>
 								<td>Python</td>
 							</tr>
 						</tbody>
