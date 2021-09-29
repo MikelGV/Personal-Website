@@ -104,6 +104,12 @@ body {
   
 }
 /*Header*/
+body .scrollN, body .scrollN:hover {
+  font-size: 1.15em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 nav {
   position: fixed;
   z-index: 9999;
@@ -124,6 +130,8 @@ nav ul li {
   display: inline-block;
   margin: 0;
   padding: .2em .7em;
+  -webkit-transition: all .7s ease-out;
+  transition: all .7s ease-out;
 }
 
 nav a {
@@ -131,8 +139,6 @@ nav a {
   height: 100%;
   color: black;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.15em;
   font-weight: lighter;
   letter-spacing: 1px;
   transition: .25s ease-in-out;

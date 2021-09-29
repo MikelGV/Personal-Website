@@ -12,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 function Header() {
 	return (
 		<div>
-			<nav id="gobla-nav" className="navbar navbar-expand-lg fixed-top scrolled-nav">
+			<nav id="gobla-nav" className="navbar navbar-expand-lg fixed-top">
 				<div className="container">
 					<div className="collapse navbar-collapse scrollN unscrolledLink">
 						<ul>
