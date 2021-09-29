@@ -89,9 +89,9 @@ function MyWork()  {
 
 function PopularProjects(){
 	return(
-		<div className="popular">
-			<h4>Popular projects</h4>
-			<div>
+		<div className="container-fluid">
+			<div className="popular">
+				<h4>Popular projects</h4>
 				<div>
 					<table className="table">
 						<thead >
@@ -127,6 +127,17 @@ function PopularProjects(){
 							</tr>
 						</tbody>
 					</table>
+				</div>
+				<div className="future">
+					<h5>Future Ventures (Teach myself in 2022)</h5>
+					<ul>
+						<li>
+							Machine Learning/AI
+						</li>
+						<li>
+							Security
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
