@@ -38,7 +38,7 @@ function Header() {
 								<Link to="/software">Software</Link>
 							</li>
 							<li>
-								<Link to="/blog">blog</Link>
+								<Link to="/blog">Blog</Link>
 							</li>
 						</ul>
 						<div className="d-flex flex-row-reverse flex-grow-1">
@@ -132,7 +132,6 @@ function Home() {
 			</div>
 			<MyWork/>
 			<PopularProjects/>
-			<Footer/> 
 		</Router>
 	)
 }
@@ -182,6 +181,7 @@ class App extends React.Component {
 					<Route path="/about" component={AboutMe} />
 					<Route path="/contact" component={Contact} />
 				</Switch>
+				<Footer/> 
 			</Router>
 		)
 	}
