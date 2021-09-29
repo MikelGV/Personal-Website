@@ -34,7 +34,7 @@ h4 {
 }
 
 .table {
-  width: 500%;
+  width: 400%;
   max-width: 50%;
   margin: auto;
   background-color: transparent;
@@ -50,7 +50,7 @@ h4 {
 }
 .worksection {
   background-color: #191919;
-  height: 500px;
+  height: 400px;
 }
 .popular {
   height: 500px;
@@ -76,12 +76,12 @@ h4 {
   padding: 1em 10%;
 }
 
-.content-wrapper h1 {
-  margin: 0;
+.content-wrapper h1, h2, h3, h4, h5, h6 {
+  
   color: white;
 }
 
-.content-wrapper p {
+.content-wrapper p, li, ul {
   color: white;
 }
 /*Utils*/
