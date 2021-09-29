@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM, { render } from 'react-dom';
 import {
 	BrowserRouter as Router,
@@ -10,9 +10,21 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 function Header() {
+	const [navbar, setNavbar] = useState(false);
+
+	const changeBackground = () => {
+		if (window.scrollY >= 60) {
+			setNavbar(true)
+		} else {
+			setNavbar(false)
+		}
+	}
+
+	window.addEventListener('scroll', changeBackground)
+
 	return (
 		<div>
-			<nav id="gobla-nav" className="navbar navbar-expand-lg fixed-top">
+			<nav id="gobla-nav" className={navbar ? "navbar navbar-expand-lg fixed-white" : "navbar navbar-expand-lg fixed-top"}>
 				<div className="container">
 					<div className="collapse navbar-collapse scrollN unscrolledLink">
 						<ul>
@@ -72,7 +84,7 @@ function PopularProjects(){
 			<h4>Popular projects</h4>
 			<div>
 				<div>
-					<table class="table">
+					<table className="table">
 						<thead >
 							<tr>
 								<th>Title</th>
