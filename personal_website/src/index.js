@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM, { render } from 'react-dom';
+import { userTable } from 'react-table'
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -38,7 +39,7 @@ function Header() {
 								<Link to="/software">Software</Link>
 							</li>
 							<li>
-								<Link to="/blog">blog</Link>
+								<Link to="/blog">Blog</Link>
 							</li>
 						</ul>
 						<div className="d-flex flex-row-reverse flex-grow-1">
@@ -72,6 +73,14 @@ function MyWork()  {
 					help others and solve problems. As a Software developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my
 					mission-driven work ethic to literally change the world. That's why I'm excited to make big impact at a high growth company.
 				</p>
+				<div className="col-lg-3">
+					<h5>Software Development</h5>
+					<ul>
+						<li>
+							microservices, APIs, full stack web apps
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	)
@@ -104,9 +113,16 @@ function PopularProjects(){
 							</tr>
 							<tr>
 								<td>
-									<a href="https://github.com/MikelGV/SudokuSolver" className="plainLink">SudokuSolver</a>
+									<a href="https://github.com/MikelGV/SudokuSolver" className="plainLink">Sudoku Solver</a>
 								</td>
 								<td>Sudoku game using pygame and using backtracking algorithm to solve the sudoku</td>
+								<td>Python</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://github.com/MikelGV/WeatherApp" className="plainLink">Weather App</a>
+								</td>
+								<td>Weather app build in flask using the openWeather API</td>
 								<td>Python</td>
 							</tr>
 						</tbody>
@@ -132,15 +148,16 @@ function Home() {
 			</div>
 			<MyWork/>
 			<PopularProjects/>
-			<Footer/> 
 		</Router>
 	)
 }
 // other tabs
 function Software() {
 	return(
-		<div className="softwareDiv">
-			<h1>Software</h1>
+		<div className="container-fluid">
+			<div className="container">
+				<h3 className="h5spacing">Software Repository</h3>
+			</div>
 		</div>
 	)
 }
@@ -182,6 +199,7 @@ class App extends React.Component {
 					<Route path="/about" component={AboutMe} />
 					<Route path="/contact" component={Contact} />
 				</Switch>
+				<Footer/> 
 			</Router>
 		)
 	}
