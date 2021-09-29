@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM, { render } from 'react-dom';
+import { userTable } from 'react-table'
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -153,8 +154,10 @@ function Home() {
 // other tabs
 function Software() {
 	return(
-		<div className="softwareDiv">
-			<h1>Software</h1>
+		<div className="container-fluid">
+			<div className="container">
+				<h3 className="h5spacing">Software Repository</h3>
+			</div>
 		</div>
 	)
 }
