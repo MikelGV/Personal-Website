@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM, { render } from 'react-dom';
-import { userTable } from 'react-table'
+import { useTable } from 'react-table'
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -164,10 +164,80 @@ function Home() {
 }
 // other tabs
 function Software() {
+	const data = React.useMemo(() => [
+		{
+			col1: 'Hello',
+			col2: 'World',
+		},{
+			col1: 'react-table',
+			col2: 'rocks',
+		}, {
+			col1: 'whatever',
+			col2: 'you want'
+		},
+	],
+	[]
+	)
+	const columns = React.useMemo(()=> [
+		{
+			Header: 'Title',
+			accessor: 'col1',
+		}, {
+			Header: 'Description',
+			accessor: 'col2',
+		},
+	],
+	[])
+	const tableInstance = useTable({columns, data})
+	const {
+		getTableProps,
+		getTableBodyProps,
+		headerGroups,
+		rows,
+		prepareRow,
+	} = tableInstance
 	return(
 		<div className="container-fluid">
 			<div className="container">
 				<h3 className="h5spacing">Software Repository</h3>
+				<table {...getTableProps()} style={{border: 'solid 1px black'}}>
+					<thead>
+						{headerGroups.map(headerGroup => (
+							<tr {...headerGroup.getHeaderGroupProps()}>
+								{headerGroup.headers.map(column => (
+									<th {...column.getHeaderProps()} style={{
+										borderBottom: 'solid 3px gray',
+										background: 'white',
+										color:'black',
+										fontWeight: 'bold'
+									}}>
+										{column.render('Header')}
+									</th>
+								))}
+							</tr>
+						))}
+					</thead>
+					<tbody {...getTableBodyProps()}>
+						{rows.map(row => {
+							prepareRow(row)
+							return(
+								<tr {...row.getRowProps()}>
+									{row.cells.map(cell => {
+										return(
+											<td {...cell.getCellProps()} style={{
+												padding: '10px',
+												border: 'solid 1px gray',
+												background: 'white',
+											}}>
+												{cell.render('Cell')}
+											</td>
+										)
+									})}
+								</tr>
+							)
+						})}
+					</tbody>
+				</table>
 			</div>
 		</div>
 	)
