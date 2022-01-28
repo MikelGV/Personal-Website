@@ -104,12 +104,12 @@ function PopularProjects(){
 						<tbody>
 							<tr>
 								<td>
-									<a href="https://github.com/MikelGV/chatMe" className="plainLink">chatMe</a>
+									<a href="https://github.com/MikelGV/Social-Media" className="plainLink">Social-Media</a>
 								</td>
 								<td>
-									Chat Application build in django and django-channels as websocket
+									Facebook clone build in nodejs, react and socket.io
 								</td>
-								<td>Python</td>
+								<td>JavaScript</td>
 							</tr>
 							<tr>
 								<td>
