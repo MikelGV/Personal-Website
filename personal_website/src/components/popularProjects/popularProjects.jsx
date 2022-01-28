@@ -2,7 +2,7 @@ export default function PopularProjects(){
 	return(
 		<div className="container-fluid">
 			<div className="popular">
-				<h4>Popular projects</h4>
+				<h4>Projects</h4>
 				<div>
 					<table className="table">
 						<thead >
@@ -19,6 +19,24 @@ export default function PopularProjects(){
 								</td>
 								<td>
 									Facebook clone build in nodejs, react and socket.io
+								</td>
+								<td>JavaScript</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://github.com/MikelGV/graphql" className="plainLink">Blog-Backend</a>
+								</td>
+								<td>
+									Blog-backend made with nodejs, graphql and socket.io
+								</td>
+								<td>JavaScript</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://github.com/MikelGV/graphqlfrontend" className="plainLink">Blog-Fronted</a>
+								</td>
+								<td>
+									Blog-frontend made with ReactJs and socket.io
 								</td>
 								<td>JavaScript</td>
 							</tr>
