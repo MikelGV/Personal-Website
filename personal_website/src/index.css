@@ -48,7 +48,7 @@ p {
 
 .Image {
   height: 1000px;
-  background: url('image/background.jpeg');
+  background: url('/public/assets/background/background.jpeg');
   background-size: 130%;
   background-position: center;
   background-repeat: no-repeat;
