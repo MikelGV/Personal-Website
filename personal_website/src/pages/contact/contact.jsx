@@ -1,3 +1,6 @@
+import "./contact.css"
+
+
 export default function Contact() {
 	return(
 		<div className="contact">
@@ -24,7 +27,7 @@ export default function Contact() {
 							<option className="Other" selected="">Other</option>
 						</select>
 					</div>
-					<div className="submitButton"></div>
+					<button className="submitButton">Button</button>
 				</form>
 			</div>
 		</div>
