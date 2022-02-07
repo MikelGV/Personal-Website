@@ -9,15 +9,15 @@ export default function Contact() {
 				<form className="contactForm">
 					<div className="formGroup">
 						<label className="labelName" for="name">Name</label>
-						<input type="text" id="name" value="" required="" />
+						<input type="text" id="email" value="" required="" className="contactInput"/>
 					</div>
 					<div className="formGroup">
 						<label className="labelName" for="name">Email</label>
-						<input type="text" id="email" value="" required="" />
+						<input type="email" id="email" value="" required="" className="contactInput"/>
 					</div>
 					<div className="formGroup">
 						<label className="labelName" for="name">Subject</label>
-						<input type="text" id="subject" value="" required="" />
+						<input type="text" id="subject" value="" required="" className="contactInput"/>
 					</div>
 					<div className="formGroup">
 						<label className="labelName" for="name">Reason</label>
@@ -27,7 +27,13 @@ export default function Contact() {
 							<option className="Other" selected="">Other</option>
 						</select>
 					</div>
-					<button className="submitButton">Button</button>
+					<div className="formGroup">
+						<label for="message" className="labelName">Message</label>
+						<textarea id="message" rows="4" placeholder="..." className="form-control"></textarea>
+					</div>
+					<div className="formGroup">
+						<button className="submitButton">Button</button>
+					</div>
 				</form>
 			</div>
 		</div>
