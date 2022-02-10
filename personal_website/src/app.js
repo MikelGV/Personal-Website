@@ -12,7 +12,6 @@ import Header from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import MyWork from './components/myWork/myWork';
 import PopularProjects from './components/popularProjects/popularProjects';
-import AboutMe from './pages/about/about';
 import Contact from './pages/contact/contact';
 
 function Home() {
@@ -22,6 +21,7 @@ function Home() {
 				<div className='Image'>
 					<div className='center arial'>
 						<h1 className='titleMain'>Mikel Galdos</h1>
+						
 						<h5>
 							Self-taught software developer through research & development.
 						</h5>
@@ -41,7 +41,6 @@ export default class App extends React.Component {
 				<Header/>
 				<Switch>
 					<Route path="/" exact component={Home}/>
-					<Route path="/about" component={AboutMe} />
 					<Route path="/contact" component={Contact} />
 				</Switch>
 				<Footer/> 
