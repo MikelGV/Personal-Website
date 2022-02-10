@@ -21,10 +21,7 @@ export default function Header() {
 					<div className="collapse navbar-collapse scrollN unscrolledLink">
 						<ul>
 							<li>
-								<Link to="/">Home</Link>
-							</li>
-							<li>
-								<Link to="/about">About Me</Link>
+								<Link to="/">Mikel Galdos</Link>
 							</li>
 						</ul>
 						<div className="d-flex flex-row-reverse flex-grow-1">
