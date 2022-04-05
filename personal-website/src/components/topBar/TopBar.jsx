@@ -59,8 +59,8 @@ const TopBar = () => {
         <Right>
           <MenuItem>About</MenuItem>
           <MenuItem>Work</MenuItem>
-          <MenuItem>Contact</MenuItem>
           <MenuItem>Experience</MenuItem>
+          <MenuItem>Contact</MenuItem>
           <Button>Resume</Button>
         </Right>
       </Wrapper>
