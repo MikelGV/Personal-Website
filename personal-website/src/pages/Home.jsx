@@ -12,14 +12,11 @@ import Contact from '../components/contact/Contact'
 const Home = () => {
   return (
     <div>
-      <TopBar/>
       <Landing/>
       <About/>
       <Experience/>
       <Work/>
       <Contact/>
-      <SideBar/>
-      <Footer/>
     </div>
   )
 }
