@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    height: 30vh;
+    height: 90vh;
     width: 100%;
     background-color: #023047;
     display: flex;
