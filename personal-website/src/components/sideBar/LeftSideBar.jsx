@@ -5,36 +5,35 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Container = styled.div`
-  width: 40px;
-  position: flex;
-  bottom: 0px;
-  left: 40px;
-  right: auto;
-  z-index: 10;
+  height: calc(10vh - 10px);
+  top: 60vh;
+  position: sticky;
 `;
 
 const Wrapper = styled.div`
-  flex: 1;
+  display: flex;
 `;
 
 const List = styled.ul`
-  display: flex;
   flex-direction: column;
-  -moz-box-align: center;
   padding: 0px;
-  list-style: none;
 `;
 
 const ListItem = styled.li`
   padding: 10px;
   cursor: pointer;
-  color: white;
-  display: flex;
+  color: #48cae1;
+  list-style: none;
   align-items: center;
-  border-radius: 10px;
 `;
 
-const SideBar = () => {
+const Line = styled.div`
+  position: absolute;
+  left: 50%;
+  border-left: 3px solid #48cae1;
+  height: 240px;
+`;
+const LeftSideBar = () => {
   return (
     <Container>
       <Wrapper>
@@ -48,10 +47,11 @@ const SideBar = () => {
           <ListItem>
             <InstagramIcon/>
           </ListItem>
+          <Line></Line>
         </List>
       </Wrapper>
     </Container>
   )
 }
 
-export default SideBar
+export default LeftSideBar
