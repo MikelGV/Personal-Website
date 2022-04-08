@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    height: 90vh;
+    height: 100vh;
     width: 100%;
-    background-color: #023047;
     display: flex;
     align-items: center;
     justify-content: center;
