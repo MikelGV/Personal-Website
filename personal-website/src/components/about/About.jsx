@@ -6,16 +6,16 @@ const Container = styled.div`
   height: 100vh;
   width: 100%;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  height: 100%;
+  width: 50%;
 `;
 
 const Title = styled.h1`
+  margin-right: 10px;
   color: #ade8f4;
 `;
 
