@@ -40,7 +40,7 @@ const About = () => {
       <Wrapper>
         <Title>About</Title>
         <Line></Line>
-        <Text>Hello! My name is Mikel and I enjoy creating things that live on the internet. My interest in development started back in 2019 when my brother showed me what he was learning and i decided to try it - turns out that i like it and i learn HTML & CSS! </Text>
+        <Text>Hello! My name is Mikel and I enjoy creating things that live on the internet. My interest in development started back in 2019 when my brother showed me what he was learning and i decided to try it - turns out that i liked it and i learnt HTML & CSS! </Text>
         <Text>Fast-forward to today, and I've had the privilege to spand my knowledge helping friends build their own projects. My main goal is helping others building websites.</Text>
         <Text>Here are a few technologies I've been working with recently:</Text>
         <TechnologyWrapper>
