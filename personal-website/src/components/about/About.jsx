@@ -24,7 +24,7 @@ const Title = styled.h1`
 
 const Line = styled.hr`
   border-right: 30vh solid #ade8f4;
-  margin-right: 400px;
+  margin-right: 340px;
   margin-bottom: 10px;
 `;
 
