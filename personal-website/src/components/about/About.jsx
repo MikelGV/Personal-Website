@@ -46,6 +46,7 @@ const TechnologyWrapper = styled.div`
 const Technology = styled.ul`
   display: grid;
   grid-template-columns: 200px 1fr;
+  margin-right: 200px;
   grid-gap: 16px;
 `;
 
