@@ -18,18 +18,21 @@ const AboutWrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 40px;
+  margin-right: 420px;
   color: #ade8f4;
 `;
 
 const Line = styled.hr`
   border-right: 30vh solid #ade8f4;
+  margin-right: 400px;
   margin-bottom: 10px;
 `;
 
 const Text = styled.span`
   display: flex;
   font-size: 20px;
-  max-width: 420px;
+  margin-right: 100px;
+  max-width: 520px;
   color: #0096c7;
 `;
 
