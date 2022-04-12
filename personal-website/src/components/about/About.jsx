@@ -18,20 +18,17 @@ const AboutWrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 40px;
-  margin-right: 420px;
   color: #ade8f4;
 `;
 
 const Line = styled.hr`
-  border-right: 30vh solid #ade8f4;
-  margin-right: 340px;
+  border-right: 20vh solid #ade8f4;
   margin-bottom: 10px;
 `;
 
 const Text = styled.span`
   display: flex;
   font-size: 20px;
-  margin-right: 100px;
   max-width: 520px;
   color: #0096c7;
 `;
@@ -46,7 +43,6 @@ const TechnologyWrapper = styled.div`
 const Technology = styled.ul`
   display: grid;
   grid-template-columns: 200px 1fr;
-  margin-right: 200px;
   grid-gap: 16px;
 `;
 

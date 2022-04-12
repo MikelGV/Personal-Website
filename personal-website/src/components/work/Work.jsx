@@ -30,6 +30,14 @@ const ProjectTitle = styled.h2`
 `;
 
 const ProjectDescription = styled.span`
+  display: flex;
+  max-width: 320px;
+  color: #48cae4;
+`;
+
+const ProjectTech = styled.ul``;
+
+const Tech = styled.li`
   color: #0096c7;
 `;
 
@@ -44,12 +52,23 @@ const Work = () => {
           <Project>
             <ProjectImg src='' />
             <ProjectTitle>Social Media</ProjectTitle>
-            <ProjectDescription>Facebook clone build with NodeJs, ReactJs, ExpressJs</ProjectDescription>
+            <ProjectDescription>A web that replicates some Facebook functionalities like, create posts, liking posts and  following people.</ProjectDescription>
+            <ProjectTech>
+              <Tech>Express</Tech>
+              <Tech>React</Tech>
+              <Tech>Heroku</Tech>
+            </ProjectTech>
           </Project>
           <Project>
             <ProjectImg src='' />
             <ProjectTitle>E-shop</ProjectTitle>
-            <ProjectDescription>E-shop build with NodeJs, ReactJs, ExpressJs</ProjectDescription>
+            <ProjectDescription>E-shop app for buying products.</ProjectDescription>
+            <ProjectTech>
+              <Tech>Express</Tech>
+              <Tech>React</Tech>
+              <Tech>Styled-componets</Tech>
+              <Tech>Heroku</Tech>
+            </ProjectTech>
           </Project>
         </ProjectWrapper>
       </Wrapper>
