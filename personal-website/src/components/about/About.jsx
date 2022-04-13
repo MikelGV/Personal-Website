@@ -2,13 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  flex: 1;
+  display: flex;
   width: 100%;
   height: 50vh;
   
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  flex: 1;
+`;
 
 const AboutWrapper = styled.div`
   display: flex;
