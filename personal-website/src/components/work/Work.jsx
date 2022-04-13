@@ -2,37 +2,54 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
+  width: 100%;
+  height: 50vh;
+  margin-top: 30vh;
+`;
+
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
 
-const Wrapper = styled.div``;
-
 const Title = styled.h1`
   color: #48cae4;
 `;
 
 const Line = styled.hr`
-  border-right: 30vh solid #ade8f4;
-  margin-bottom: 10px;
+  border-right: 55vh solid #ade8f4;
+  margin-bottom: 20px;
 `;
 
-const ProjectWrapper = styled.div``;
+const ProjectWrapper = styled.div`
+  flex: 1;
+  margin: 5px;
+  min-width: 280px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &:hover ${Container}{
+    opacity: 1;
+  }
+`;
 
-const Project = styled.div``;
+const Project = styled.div`
+  margin-right: 10px;
+`;
 
-const ProjectImg = styled.img``;
+const ProjectImg = styled.img`
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+  cursor: pointer;
+`;
 
 const ProjectTitle = styled.h2`
   color: #ade8f4;
-`;
-
-const ProjectDescription = styled.span`
-  display: flex;
-  max-width: 320px;
-  color: #48cae4;
 `;
 
 const ProjectTech = styled.ul``;
@@ -50,9 +67,8 @@ const Work = () => {
         <Line />
         <ProjectWrapper>
           <Project>
-            <ProjectImg src='' />
+            <ProjectImg src='/assets/E-shop.png' />
             <ProjectTitle>Social Media</ProjectTitle>
-            <ProjectDescription>A web that replicates some Facebook functionalities like, create posts, liking posts and  following people.</ProjectDescription>
             <ProjectTech>
               <Tech>Express</Tech>
               <Tech>React</Tech>
@@ -60,9 +76,8 @@ const Work = () => {
             </ProjectTech>
           </Project>
           <Project>
-            <ProjectImg src='' />
+            <ProjectImg src='/assets/E-shop.png' />
             <ProjectTitle>E-shop</ProjectTitle>
-            <ProjectDescription>E-shop app for buying products.</ProjectDescription>
             <ProjectTech>
               <Tech>Express</Tech>
               <Tech>React</Tech>
