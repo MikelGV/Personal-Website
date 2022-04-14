@@ -85,7 +85,7 @@ const Work = () => {
         <Title>Some  Things I've Built</Title>
         <Line />
           <Project>
-            <ProjectImg src='/assets/E-shop.png' />
+            <ProjectImg src='/assets/SocialMedia.png' />
             <Info>
               <ProjectTitle>Social Media</ProjectTitle>
               <ProjectDesc>Social Media app that replicates the core Facebook functionalities, like posting photos and following other users. Technologies used:</ProjectDesc>
