@@ -35,7 +35,7 @@ const Line = styled.hr`
 `;
 
 const FormWrapper = styled.div`
-  height: 50%;
+  height: 75%;
   width: 40%;
   background-color: rgba(0,0,0, 0.2);
 `;
@@ -62,6 +62,16 @@ const Name = styled.input`
 const Email = styled.input`
   background-color: rgba(0,0,0, 0.2);
   margin-top: 10px;
+  margin-bottom: 10px;
+  width: 60%;
+  height: 50px;
+  ::placeholder {
+    color: #ade8f4;
+  }
+`;
+
+const Subject = styled.input`
+  background-color: rgba(0,0,0, 0.2);
   margin-bottom: 10px;
   width: 60%;
   height: 50px;
@@ -110,6 +120,7 @@ const Contact = () => {
           <Form>
             <Name placeholder='Name' name='name'/>
             <Email placeholder='Email' name='email'/>
+            <Subject placeholder='Subject' name='subject'/>
             <Message placeholder='Ask me anything' name='message'/>
             <Button>Send</Button>
           </Form>
