@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Center = styled.div`
@@ -11,9 +13,6 @@ const Center = styled.div`
 
 const Item = styled.div`
   margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #ade8f4;
 `;
 
