@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
-
+import emailjs from '@emailjs/browser'
 
 const Container = styled.div`
   width: 100%;
@@ -50,7 +50,8 @@ const Form = styled.form`
 
 const Name = styled.input`
   background-color: rgba(0,0,0, 0.2);
-  margin-top: 60px;
+  color: white;
+  margin-top: 90px;
   width: 60%;
   height: 50px;
   border: 1px solid white;
@@ -61,8 +62,9 @@ const Name = styled.input`
 
 const Email = styled.input`
   background-color: rgba(0,0,0, 0.2);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 60%;
   height: 50px;
   ::placeholder {
@@ -72,7 +74,8 @@ const Email = styled.input`
 
 const Subject = styled.input`
   background-color: rgba(0,0,0, 0.2);
-  margin-bottom: 10px;
+  color: white;
+  margin-bottom: 30px;
   width: 60%;
   height: 50px;
   ::placeholder {
@@ -83,7 +86,8 @@ const Subject = styled.input`
 const Message = styled.textarea`
   width: 60%;
   background-color: rgba(0,0,0, 0.2);
-  margin-bottom: 20px;
+  color: white;
+  margin-bottom: 30px;
   resize: none;
   ::placeholder {
     color: #ade8f4;
@@ -109,20 +113,33 @@ const Button = styled.button`
   }
 `;
 
+const PUBLIC_KEYS = process.env.REACT_APP_PUBLIC_KEY;
+const TEMPLATE_KEYS = process.env.REACT_APP_TEMPLATE_KEY;
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', `${TEMPLATE_KEYS}`, form.current, `${PUBLIC_KEYS}`)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <Container>
       <Wrapper>
         <FormWrapper>
           <ContactMe>Contact</ContactMe>
           <Line></Line>
-          <Form>
+          <Form ref={form} onSubmit={sendEmail}>
             <Name placeholder='Name' name='name'/>
             <Email placeholder='Email' name='email'/>
             <Subject placeholder='Subject' name='subject'/>
             <Message placeholder='Ask me anything' name='message'/>
-            <Button>Send</Button>
+            <Button type='submit'>Send</Button>
           </Form>
         </FormWrapper>
       </Wrapper>
