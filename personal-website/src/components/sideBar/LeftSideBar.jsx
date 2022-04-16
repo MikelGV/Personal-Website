@@ -5,17 +5,18 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Container = styled.div`
-  height: calc(10vh - 10px);
-  top: 60vh;
+  height: calc(13vh - 13px);
+  top: 76vh;
   position: sticky;
 `;
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const List = styled.ul`
-  flex-direction: column;
   padding: 0px;
 `;
 
@@ -24,14 +25,14 @@ const ListItem = styled.li`
   cursor: pointer;
   color: #48cae1;
   list-style: none;
-  align-items: center;
 `;
 
 const Line = styled.div`
   position: absolute;
   left: 50%;
+  top: 18vh;
   border-left: 3px solid #48cae1;
-  height: 240px;
+  height: 50%;
 `;
 const LeftSideBar = () => {
   return (
