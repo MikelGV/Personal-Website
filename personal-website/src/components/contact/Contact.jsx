@@ -51,7 +51,7 @@ const Form = styled.form`
 const Name = styled.input`
   background-color: rgba(0,0,0, 0.2);
   color: white;
-  margin-top: 90px;
+  margin-top: 50px;
   width: 60%;
   height: 50px;
   border: 1px solid white;
