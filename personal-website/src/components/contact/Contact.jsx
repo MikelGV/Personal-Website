@@ -129,7 +129,7 @@ const Contact = () => {
       });
   };
   return (
-    <Container>
+    <Container id='Contact'>
       <Wrapper>
         <FormWrapper>
           <ContactMe>Contact</ContactMe>

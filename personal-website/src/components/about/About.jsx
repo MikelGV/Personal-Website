@@ -5,12 +5,14 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   height: 80vh;
-  
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 `;
 
 const Wrapper = styled.div`
   flex: 1;
   display: flex;
+  margin-top: 100px;
   align-items: center;
   flex-direction: column;
 `;
@@ -63,7 +65,7 @@ const Tech = styled.li`
 
 const About = () => {
   return (
-    <Container>
+    <Container id='about'>
       <Wrapper>
         <Title>About</Title>
         <Line></Line>
