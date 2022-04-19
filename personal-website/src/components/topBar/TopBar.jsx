@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   height: 60px;
@@ -33,11 +34,12 @@ const Right = styled.div`
   justify-content: flex-end;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.a`
   font-size: 17px;
   cursor: pointer;
   margin-left: 25px;
   color: white;
+  text-decoration: none;
 `;
 
 const Button = styled.button`
@@ -55,13 +57,15 @@ const TopBar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Logo>MG</Logo>
+          <Link to={'/'}>
+            <Logo>MG</Logo>
+          </Link>
         </Left>
         <Right>
-          <MenuItem>About</MenuItem>
-          <MenuItem>Work</MenuItem>
-          <MenuItem>Experience</MenuItem>
-          <MenuItem>Contact</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+          <MenuItem href='#work'>Work</MenuItem>
+          {/* <MenuItem>Experience</MenuItem> */}
+          <MenuItem href='#Contact'>Contact</MenuItem>
           <Button>Resume</Button>
         </Right>
       </Wrapper>

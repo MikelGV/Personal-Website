@@ -80,7 +80,7 @@ const Tech = styled.li`
 
 const Work = () => {
   return (
-    <Container>
+    <Container id='work'>
       <Wrapper>
         <Title>Some  Things I've Built</Title>
         <Line />

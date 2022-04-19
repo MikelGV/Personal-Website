@@ -16,7 +16,7 @@ const Home = () => {
     <Container>
       <Landing/>
       <About/>
-      <Experience/>
+      {/* <Experience/> */}
       <Work/>
       <Contact/>
       <Footer/>
