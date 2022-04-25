@@ -20,11 +20,19 @@ const List = styled.ul`
   padding: 0px;
 `;
 
-const ListItem = styled.li`
+const ListItems = styled.li`
   padding: 10px;
   cursor: pointer;
   color: #48cae1;
   list-style: none;
+`;
+
+const ListItem = styled.a`
+  color: #48cae1;
+  text-decoration: none;
+  :hover {
+    color: #5bc0be;
+  }
 `;
 
 const Line = styled.div`
@@ -39,15 +47,21 @@ const LeftSideBar = () => {
     <Container>
       <Wrapper>
         <List>
-          <ListItem>
-            <GitHubIcon/>
-          </ListItem>
-          <ListItem>
-            <LinkedInIcon/>
-          </ListItem>
-          <ListItem>
-            <InstagramIcon/>
-          </ListItem>
+          <ListItems>
+            <ListItem href='https://github.com/MikelGV' target="_blank">
+              <GitHubIcon/>
+            </ListItem>
+          </ListItems>
+          <ListItems>
+            <ListItem href='https://www.linkedin.com/in/mikel-galdos-vargas-ab8050187/' target="_blank">
+              <LinkedInIcon/>
+            </ListItem>
+          </ListItems>
+          <ListItems>
+            <ListItem href='https://www.instagram.com/mikelgaldosv' target="_blank">
+              <InstagramIcon/>
+            </ListItem>
+          </ListItems>
           <Line></Line>
         </List>
       </Wrapper>
