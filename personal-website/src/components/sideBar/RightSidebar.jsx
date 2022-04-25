@@ -22,7 +22,6 @@ const TextWrapper = styled.div`
 const Text = styled.p`
   padding: 10px;
   transform: rotate(90deg);
-  cursor: pointer;
   color: #48cae1;
 `;
 
