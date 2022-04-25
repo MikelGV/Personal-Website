@@ -40,16 +40,25 @@ const MenuItem = styled.a`
   margin-left: 25px;
   color: white;
   text-decoration: none;
+  :hover {
+    color: #5bc0be;
+  }
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   font-size: 17px;
   background-color: transparent;
+  padding: 0.55rem 1rem;
   border-radius: 5px;
   border: #caf0f8 solid 2px;
   margin-left: 25px;
   color: #caf0f8;
   cursor: pointer;
+  text-decoration: none;
+  :hover {
+    color: #5bc0be;
+    border-color: #5bc0be;
+  }
 `;
 
 const TopBar = () => {
@@ -66,7 +75,7 @@ const TopBar = () => {
           <MenuItem href='#work'>Work</MenuItem>
           {/* <MenuItem>Experience</MenuItem> */}
           <MenuItem href='#Contact'>Contact</MenuItem>
-          <Button>Resume</Button>
+          <Button href='/assets/resume.pdf'>Resume</Button>
         </Right>
       </Wrapper>
     </Container>
