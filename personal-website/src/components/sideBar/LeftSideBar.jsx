@@ -1,13 +1,24 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
 
 const Container = styled.div`
   height: calc(13vh - 13px);
   top: 76vh;
   position: sticky;
+  animation: 1s ${fadeIn} ease-in;
 `;
 
 const Wrapper = styled.div`

@@ -1,12 +1,24 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
 
 const Container = styled.div`
   height: calc(13vh - 13px);
   top: 60vh;
   max-width: 50px;
   position: sticky;
+  animation: 1s ${fadeIn} ease-in;
+
 `;
 
 const Wrapper = styled.div`
