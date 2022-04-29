@@ -1,6 +1,17 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import { Link } from 'react-router-dom'
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
+
 
 const Container = styled.div`
   height: 60px;
@@ -25,6 +36,7 @@ const Logo = styled.h1`
   font-size: 25px;
   color: white;
   cursor: pointer;
+  animation: 1s ${fadeIn} ease-in;
 `;
 
 const Right = styled.div`
@@ -40,6 +52,7 @@ const MenuItem = styled.a`
   margin-left: 25px;
   color: white;
   text-decoration: none;
+  animation: 2s ${fadeIn} ease-in;
   :hover {
     color: #5bc0be;
   }
@@ -55,6 +68,7 @@ const Button = styled.a`
   color: #caf0f8;
   cursor: pointer;
   text-decoration: none;
+  animation: 3s ${fadeIn} ease-in;
   :hover {
     color: #5bc0be;
     border-color: #5bc0be;
