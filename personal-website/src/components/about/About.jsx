@@ -1,12 +1,10 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
   width: 100%;
   height: 80vh;
-  opacity: 1;
-  transition: opacity 250ms ease-in;
 `;
 
 const Wrapper = styled.div`
@@ -15,6 +13,16 @@ const Wrapper = styled.div`
   margin-top: 100px;
   align-items: center;
   flex-direction: column;
+  transform: translateY(20vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease-out, transform 2.2s ease-out;
+  will-change: opacity, visibility;
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
 `;
 
 const Title = styled.h1`
@@ -64,9 +72,20 @@ const Tech = styled.li`
 `;
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setIsVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+
   return (
     <Container id='about'>
-      <Wrapper>
+      <Wrapper ref={domRef} className={isVisible ? "is-visible" : ""}>
         <Title>About</Title>
         <Line></Line>
         <AboutWrapper>
