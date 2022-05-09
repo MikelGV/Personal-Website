@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import emailjs from '@emailjs/browser'
 
@@ -8,6 +8,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(20vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease-out, transform 2.2s ease-out;
+  will-change: opacity, visibility;
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -117,6 +127,17 @@ const PUBLIC_KEYS = process.env.REACT_APP_PUBLIC_KEY;
 const TEMPLATE_KEYS = process.env.REACT_APP_TEMPLATE_KEY;
 
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setIsVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -129,7 +150,7 @@ const Contact = () => {
       });
   };
   return (
-    <Container id='Contact'>
+    <Container id='Contact' ref={domRef} className={isVisible ? "is-visible" : ""}>
       <Wrapper>
         <FormWrapper>
           <ContactMe>Contact</ContactMe>
