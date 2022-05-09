@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -8,6 +8,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(20vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease-out, transform 2.2s ease-out;
+  will-change: opacity, visibility;
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
   
 `;
 
@@ -37,6 +47,8 @@ const Project = styled.div`
   display: flex;
   border: 10px solid #001233;
 `;
+
+const ProjectLink = styled.a``;
 
 const ProjectImg = styled.img`
   width: 30vh;
@@ -79,13 +91,25 @@ const Tech = styled.li`
 
 
 const Work = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setIsVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
   return (
-    <Container id='work'>
+    <Container id='work' ref={domRef} className={isVisible ? "is-visible" : ""}>
       <Wrapper>
         <Title>Some  Things I've Built</Title>
         <Line />
           <Project>
-            <ProjectImg src='/assets/SocialMedia.png' />
+            <ProjectLink href='' target='_blank'>
+              <ProjectImg src='/assets/SocialMedia.png' />
+            </ProjectLink>
             <Info>
               <ProjectTitle>Social Media</ProjectTitle>
               <ProjectDesc>Social Media app that replicates the core Facebook functionalities, like posting photos and following other users. Technologies used:</ProjectDesc>
@@ -98,7 +122,9 @@ const Work = () => {
             </Info>
           </Project>
           <Project>
+          <ProjectLink href='' target='_blank'>
             <ProjectImg src='/assets/E-shop.png' />
+          </ProjectLink>
             <Info>
               <ProjectTitle>E-shop</ProjectTitle>
               <ProjectDesc>Web app for buying and selling clothes. Technologies used:</ProjectDesc>
