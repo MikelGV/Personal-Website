@@ -37,6 +37,9 @@ const Logo = styled.h1`
   color: white;
   cursor: pointer;
   animation: 1s ${fadeIn} ease-in;
+  :hover {
+    color: #5bc0be;
+  }
 `;
 
 const Right = styled.div`
@@ -80,7 +83,7 @@ const TopBar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Link to={'/'}>
+          <Link to={'/'} style={{textDecoration: "none"}}>
             <Logo>MG</Logo>
           </Link>
         </Left>
