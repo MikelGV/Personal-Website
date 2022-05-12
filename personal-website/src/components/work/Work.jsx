@@ -61,10 +61,16 @@ const Info = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
 `;
 
-const ProjectTitle = styled.h2`
+const ProjectTitle = styled.a`
   color: #ade8f4;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
   width: 150px;
   background-color: rgba(0, 0, 0, 0.01);
+  :hover {
+    color: #5bc0be;
+  }
 `;
 
 const ProjectDesc = styled.span`
@@ -111,14 +117,16 @@ const Work = () => {
               <ProjectImg src='/assets/SocialMedia.png' />
             </ProjectLink>
             <Info>
-              <ProjectTitle>Social Media</ProjectTitle>
+              <ProjectTitle href=''>Social Media</ProjectTitle>
               <ProjectDesc>Social Media app that replicates the core Facebook functionalities, like posting photos and following other users. Technologies used:</ProjectDesc>
               <ProjectTech>
                 <Tech>Express</Tech>
                 <Tech>React</Tech>
                 <Tech>Heroku</Tech>
               </ProjectTech>
-              <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
+              <ProjectLink href='' target='_blank'>
+                <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
+              </ProjectLink>
             </Info>
           </Project>
           <Project>
@@ -126,7 +134,7 @@ const Work = () => {
             <ProjectImg src='/assets/E-shop.png' />
           </ProjectLink>
             <Info>
-              <ProjectTitle>E-shop</ProjectTitle>
+              <ProjectTitle href=''>E-shop</ProjectTitle>
               <ProjectDesc>Web app for buying and selling clothes. Technologies used:</ProjectDesc>
               <ProjectTech>
                 <Tech>Express</Tech>
@@ -134,7 +142,9 @@ const Work = () => {
                 <Tech>Styled-componets</Tech>
                 <Tech>Heroku</Tech>
               </ProjectTech>
-              <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
+              <ProjectLink href='' target='_blank'>
+                <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
+              </ProjectLink>
             </Info>
           </Project>
       </Wrapper>
