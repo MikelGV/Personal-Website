@@ -33,26 +33,34 @@ const Line = styled.hr`
 `;
 
 const ExperienceWrapper = styled.div`
-  background-color: rgba(0, 0, 0, 0.2);
   width: 400px;
+  height: 400px;
+  overflow: hidden;
 `;
 
 const Left = styled.div`
-  background-color: rgba(0, 0, 0, 0.01);
-  width: 300px;
+  width: 150px;
   float: left;
 `;
 
-const LeftButton = styled.button``;
-
-const Text = styled.span``;
-
-const Right = styled.div`
-  
-  float: right;
+const LeftButton = styled.button`
+  width: 100px;
+  border: none;
+  border-left: 2px solid white;
+  color: #00b4d8;
+  font-size: 18px;
+  :hover {
+    background-color: #001845;
+  }
 `;
 
-const RightTitle = styled.h3``;
+const Right = styled.div`
+  float: left;
+`;
+
+const RightTitle = styled.h3`
+  color: #90e0ef;
+`;
 
 const TimeStamp = styled.p``;
 
@@ -71,12 +79,11 @@ const Experience = () => {
         <ExperienceWrapper>
           <Left>
             <LeftButton>
-              <Text>TEST</Text>
+              TEST
             </LeftButton>
           </Left>
           <Right>
-            <RightTitle>Test</RightTitle>
-            <TimeStamp>01/12/2022</TimeStamp>
+            <RightTitle>Contributed at @test</RightTitle>
             <ListWrapper>
               <List>
                 <Item></Item>
