@@ -27,17 +27,30 @@ const Title = styled.h1`
   font-weight: 300;
 `;
 
-const ExperienceWrapper = styled.div``;
+const Line = styled.hr`
+  border-right: 20vh solid #ade8f4;
+  margin-bottom: 20px;
+`;
 
-const LeftWrapper = styled.div``;
+const ExperienceWrapper = styled.div`
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 400px;
+`;
 
-const Left = styled.div``;
+const Left = styled.div`
+  background-color: rgba(0, 0, 0, 0.01);
+  width: 300px;
+  float: left;
+`;
 
 const LeftButton = styled.button``;
 
-const RightWrapper = styled.div``;
+const Text = styled.span``;
 
-const Right = styled.div``;
+const Right = styled.div`
+  
+  float: right;
+`;
 
 const RightTitle = styled.h3``;
 
@@ -54,23 +67,22 @@ const Experience = () => {
     <Container>
       <Wrapper>
         <Title>Experience</Title>
+        <Line/>
         <ExperienceWrapper>
-          <LeftWrapper>
-            <Left>
-              <LeftButton></LeftButton>
-            </Left>
-          </LeftWrapper>
-          <RightWrapper>
-            <Right>
-              <RightTitle>Test</RightTitle>
-              <TimeStamp>01/12/2022</TimeStamp>
-              <ListWrapper>
-                <List>
-                  <Item></Item>
-                </List>
-              </ListWrapper>
-            </Right>
-          </RightWrapper>
+          <Left>
+            <LeftButton>
+              <Text>TEST</Text>
+            </LeftButton>
+          </Left>
+          <Right>
+            <RightTitle>Test</RightTitle>
+            <TimeStamp>01/12/2022</TimeStamp>
+            <ListWrapper>
+              <List>
+                <Item></Item>
+              </List>
+            </ListWrapper>
+          </Right>
         </ExperienceWrapper>
       </Wrapper>
     </Container>
