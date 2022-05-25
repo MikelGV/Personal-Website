@@ -27,19 +27,40 @@ const Title = styled.h1`
   font-weight: 300;
 `;
 
-const ExperienceWrapper = styled.div``;
+const Line = styled.hr`
+  border-right: 20vh solid #ade8f4;
+  margin-bottom: 20px;
+`;
 
-const LeftWrapper = styled.div``;
+const ExperienceWrapper = styled.div`
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+`;
 
-const Left = styled.div``;
+const Left = styled.div`
+  width: 150px;
+  float: left;
+`;
 
-const LeftButton = styled.button``;
+const LeftButton = styled.button`
+  width: 100px;
+  border: none;
+  border-left: 2px solid white;
+  color: #00b4d8;
+  font-size: 18px;
+  :hover {
+    background-color: #001845;
+  }
+`;
 
-const RightWrapper = styled.div``;
+const Right = styled.div`
+  float: left;
+`;
 
-const Right = styled.div``;
-
-const RightTitle = styled.h3``;
+const RightTitle = styled.h3`
+  color: #90e0ef;
+`;
 
 const TimeStamp = styled.p``;
 
@@ -54,23 +75,21 @@ const Experience = () => {
     <Container>
       <Wrapper>
         <Title>Experience</Title>
+        <Line/>
         <ExperienceWrapper>
-          <LeftWrapper>
-            <Left>
-              <LeftButton></LeftButton>
-            </Left>
-          </LeftWrapper>
-          <RightWrapper>
-            <Right>
-              <RightTitle>Test</RightTitle>
-              <TimeStamp>01/12/2022</TimeStamp>
-              <ListWrapper>
-                <List>
-                  <Item></Item>
-                </List>
-              </ListWrapper>
-            </Right>
-          </RightWrapper>
+          <Left>
+            <LeftButton>
+              TEST
+            </LeftButton>
+          </Left>
+          <Right>
+            <RightTitle>Contributed at @test</RightTitle>
+            <ListWrapper>
+              <List>
+                <Item></Item>
+              </List>
+            </ListWrapper>
+          </Right>
         </ExperienceWrapper>
       </Wrapper>
     </Container>
