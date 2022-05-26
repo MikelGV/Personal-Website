@@ -33,9 +33,9 @@ const Line = styled.hr`
 `;
 
 const ExperienceWrapper = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 600px;
   overflow: hidden;
+  margin-left: 130px;
 `;
 
 const Left = styled.div`
@@ -47,14 +47,17 @@ const LeftButton = styled.button`
   width: 100px;
   border: none;
   border-left: 2px solid white;
+  margin-bottom: 10px;
   color: #00b4d8;
-  font-size: 18px;
+  font-size: 19px;
   :hover {
     background-color: #001845;
   }
 `;
 
 const Right = styled.div`
+  max-width: 350px;
+  margin-left: 50px;
   float: left;
 `;
 
@@ -68,7 +71,10 @@ const ListWrapper = styled.div``;
 
 const List = styled.ul``;
 
-const Item = styled.li``;
+const Item = styled.li`
+  color: #00b4d8;
+  margin-bottom: 5px;
+`;
 
 const Experience = () => {
   return (
@@ -81,12 +87,27 @@ const Experience = () => {
             <LeftButton>
               TEST
             </LeftButton>
+            <LeftButton>
+              TEST
+            </LeftButton>
+            <LeftButton>
+              TEST
+            </LeftButton>
+            <LeftButton>
+              TEST
+            </LeftButton>
+            <LeftButton>
+              TEST
+            </LeftButton>
           </Left>
           <Right>
             <RightTitle>Contributed at @test</RightTitle>
             <ListWrapper>
               <List>
-                <Item></Item>
+                <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
+                <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
+                <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
+
               </List>
             </ListWrapper>
           </Right>
