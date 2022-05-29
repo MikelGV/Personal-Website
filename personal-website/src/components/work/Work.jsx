@@ -124,7 +124,7 @@ const Work = () => {
                 <Tech>React</Tech>
                 <Tech>Heroku</Tech>
               </ProjectTech>
-              <ProjectLink href='' target='_blank'>
+              <ProjectLink href='https://github.com/MikelGV/Social-Media' target='_blank'>
                 <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
               </ProjectLink>
             </Info>
@@ -142,7 +142,7 @@ const Work = () => {
                 <Tech>Styled-componets</Tech>
                 <Tech>Heroku</Tech>
               </ProjectTech>
-              <ProjectLink href='' target='_blank'>
+              <ProjectLink href='https://github.com/MikelGV/e-commerce-front-end' target='_blank'>
                 <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
               </ProjectLink>
             </Info>
