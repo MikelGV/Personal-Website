@@ -28,7 +28,7 @@ const Title = styled.h1`
 `;
 
 const Line = styled.hr`
-  border-right: 20vh solid #ade8f4;
+  border-right: 55vh solid #ade8f4;
   margin-bottom: 20px;
 `;
 
@@ -46,8 +46,7 @@ const Left = styled.div`
 const LeftButton = styled.button`
   width: 100px;
   border: none;
-  border-left: 2px solid white;
-  margin-bottom: 10px;
+  border-left: 3px solid #002855;
   color: #00b4d8;
   font-size: 19px;
   :hover {
@@ -57,7 +56,6 @@ const LeftButton = styled.button`
 
 const Right = styled.div`
   max-width: 350px;
-  margin-left: 50px;
   float: left;
 `;
 
@@ -80,7 +78,7 @@ const Experience = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>Experience</Title>
+        <Title>Experience & Contributions</Title>
         <Line/>
         <ExperienceWrapper>
           <Left>
@@ -106,8 +104,6 @@ const Experience = () => {
               <List>
                 <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
                 <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
-                <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
-
               </List>
             </ListWrapper>
           </Right>
