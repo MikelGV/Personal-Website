@@ -83,7 +83,7 @@ const Experience = () => {
         <ExperienceWrapper>
           <Left>
             <LeftButton>
-              TEST
+              ToolJet
             </LeftButton>
             <LeftButton>
               TEST
@@ -99,7 +99,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <RightTitle>Contributed at @test</RightTitle>
+            <RightTitle>Contributed at ToolJet</RightTitle>
             <ListWrapper>
               <List>
                 <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
