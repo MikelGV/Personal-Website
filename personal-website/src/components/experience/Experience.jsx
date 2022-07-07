@@ -102,7 +102,7 @@ const Experience = () => {
             <RightTitle>Contributed at ToolJet</RightTitle>
             <ListWrapper>
               <List>
-                <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
+                <Item>Default value in text widget deleted.</Item>
                 <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
               </List>
             </ListWrapper>
