@@ -21,6 +21,8 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+const Project = styled.div``;
+
 const Title = styled.h1`
   color: #48cae4;
   font-size: 40px;
@@ -99,13 +101,33 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <RightTitle>Contributed at ToolJet</RightTitle>
-            <ListWrapper>
-              <List>
-                <Item>Default value in text widget deleted.</Item>
-                <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
-              </List>
-            </ListWrapper>
+            <Project>
+              <RightTitle>Contributed at ToolJet</RightTitle>
+              <ListWrapper>
+                <List>
+                  <Item>Default value in text widget deleted.</Item>
+                  <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
+                </List>
+              </ListWrapper>
+            </Project>
+            <Project>
+              <RightTitle>Contributed at TEST</RightTitle>
+              <ListWrapper>
+                <List>
+                  <Item>Default value in text widget deleted.</Item>
+                  <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
+                </List>
+              </ListWrapper>
+            </Project>
+            <Project>
+              <RightTitle>Contributed at TEST</RightTitle>
+              <ListWrapper>
+                <List>
+                  <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
+                  <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
+                </List>
+              </ListWrapper>
+            </Project>
           </Right>
         </ExperienceWrapper>
       </Wrapper>
