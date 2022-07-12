@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 
 
@@ -77,6 +77,12 @@ const Item = styled.li`
 `;
 
 const Experience = () => {
+  const [visibleDiv, setVisibleDiv] = useState(0);
+
+  const handleVisibleDiv = id => setVisibleDiv(id);
+
+  const divArr = [1, 2, 3];
+
   return (
     <Container>
       <Wrapper>
@@ -84,7 +90,7 @@ const Experience = () => {
         <Line/>
         <ExperienceWrapper>
           <Left>
-            <LeftButton>
+            <LeftButton onClick={e=> handleVisibleDiv()}>
               ToolJet
             </LeftButton>
             <LeftButton>
@@ -101,7 +107,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project>
+            <Project id="1">
               <RightTitle>Contributed at ToolJet</RightTitle>
               <ListWrapper>
                 <List>
@@ -110,7 +116,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project>
+            <Project id="2">
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
@@ -119,7 +125,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project>
+            <Project id="3">
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
