@@ -107,7 +107,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project id="1">
+            <Project id="1" style={{display: id === visibleDiv ? "flex" : "none"}}>
               <RightTitle>Contributed at ToolJet</RightTitle>
               <ListWrapper>
                 <List>
