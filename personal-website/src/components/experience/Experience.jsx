@@ -116,7 +116,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: hide ? "flex" : "none"}}>
+            <Project style={{display: hide ? "block" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
@@ -125,7 +125,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: hide ? "flex" : "none"}}>
+            <Project style={{display: hide ? "block" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
