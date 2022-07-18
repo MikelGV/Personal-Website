@@ -77,11 +77,11 @@ const Item = styled.li`
 `;
 
 const Experience = () => {
-  const [visibleDiv, setVisibleDiv] = useState(0);
+  const [hide, setHide] = useState(false);
 
-  const handleVisibleDiv = id => setVisibleDiv(id);
-
-  const divArr = [1, 2, 3];
+  const toggleHide = () => {
+    setHide(!hide);
+  };
 
   return (
     <Container>
@@ -90,24 +90,24 @@ const Experience = () => {
         <Line/>
         <ExperienceWrapper>
           <Left>
-            <LeftButton onClick={e=> handleVisibleDiv()}>
+            <LeftButton onClick={toggleHide}>
               ToolJet
             </LeftButton>
-            <LeftButton>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
           </Left>
           <Right>
-            <Project id="1" style={{display: id === visibleDiv ? "flex" : "none"}}>
+            <Project>
               <RightTitle>Contributed at ToolJet</RightTitle>
               <ListWrapper>
                 <List>
@@ -116,7 +116,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project id="2">
+            <Project style={{display: hide ? "flex" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
@@ -125,7 +125,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project id="3">
+            <Project style={{display: hide ? "flex" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
