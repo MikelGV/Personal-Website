@@ -78,9 +78,18 @@ const Item = styled.li`
 
 const Experience = () => {
   const [hide, setHide] = useState(false);
+  const [hide2, setHide2] = useState(false);
+  const [hide3, setHide3] = useState(false);
+  
 
   const toggleHide = () => {
     setHide(!hide);
+  };
+  const toggleHide2 = () => {
+    setHide2(!hide2);
+  };
+  const toggleHide3 = () => {
+    setHide3(!hide3);
   };
 
   return (
@@ -93,10 +102,10 @@ const Experience = () => {
             <LeftButton onClick={toggleHide}>
               ToolJet
             </LeftButton>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton onClick={toggleHide2}>
               TEST
             </LeftButton>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton onClick={toggleHide3}>
               TEST
             </LeftButton>
             <LeftButton onClick={toggleHide}>
@@ -107,7 +116,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project>
+            <Project style={{display: hide ? "block" : "none"}}>
               <RightTitle>Contributed at ToolJet</RightTitle>
               <ListWrapper>
                 <List>
@@ -116,7 +125,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: hide ? "block" : "none"}}>
+            <Project style={{display: hide2 ? "block" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
@@ -125,7 +134,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: hide ? "block" : "none"}}>
+            <Project style={{display: hide3 ? "block" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
