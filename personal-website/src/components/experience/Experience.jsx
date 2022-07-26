@@ -121,7 +121,6 @@ const Experience = () => {
               <ListWrapper>
                 <List>
                   <Item>Default value in text widget deleted.</Item>
-                  <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
                 </List>
               </ListWrapper>
             </Project>
