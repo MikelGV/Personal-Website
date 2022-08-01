@@ -77,13 +77,13 @@ const Item = styled.li`
 `;
 
 const Experience = () => {
-  const [hide, setHide] = useState(false);
+  const [hideDefault, setHide] = useState(false);
   const [hide2, setHide2] = useState(false);
   const [hide3, setHide3] = useState(false);
   
 
   const toggleHide = () => {
-    setHide(!hide);
+    setHide(!hideDefault);
   };
   const toggleHide2 = () => {
     setHide2(!hide2);
