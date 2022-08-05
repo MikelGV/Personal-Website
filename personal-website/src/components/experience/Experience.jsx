@@ -116,8 +116,8 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project style={{display: hide ? "none" : "block"}}>
-              <RightTitle>Contributed at ToolJet</RightTitle>
+            <Project style={{display: hideDefault ? "none" : "block"}}>
+              <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
                 <List>
                   <Item>Default value in text widget deleted.</Item>
