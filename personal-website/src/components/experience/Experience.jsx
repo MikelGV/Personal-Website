@@ -116,7 +116,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project style={{display: hide ? "none" : "block"}}>
+            <Project style={{display: hideDefault ? "none" : "block"}}>
               <RightTitle>Contributed at ToolJet</RightTitle>
               <ListWrapper>
                 <List>
