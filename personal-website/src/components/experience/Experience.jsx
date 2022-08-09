@@ -95,7 +95,7 @@ const Experience = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>Experience & Contributions</Title>
+        <Title>Experience & Open Source</Title>
         <Line/>
         <ExperienceWrapper>
           <Left>
@@ -120,7 +120,7 @@ const Experience = () => {
               <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
                 <List>
-                  <Item>Default value in text widget deleted.</Item>
+                  <Item>Worked at #3181 issue. Default value in text widget deleted.</Item>
                 </List>
               </ListWrapper>
             </Project>
