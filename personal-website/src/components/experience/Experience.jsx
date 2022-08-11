@@ -124,7 +124,7 @@ const Experience = () => {
                 <Item>What is ToolJet:</Item>
                 <Item>ToolJet is an open-source low-code framework to build and deploy internal tools quickly without much effort from the engineering teams.</Item>
                 <List>
-                  <Item>Worked at #3181 issue. Default value in text widget deleted.</Item>
+                  <Item>Worked at <a href="https://github.com/ToolJet/ToolJet/issues/3181" target="_blank" style={{textDecoration:"none", color:"#00b4d8"}}>#3181</a> issue. Default value in text widget deleted.</Item>
                 </List>
               </ListWrapper>
             </Project>
