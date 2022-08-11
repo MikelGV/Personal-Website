@@ -67,7 +67,9 @@ const RightTitle = styled.h3`
 
 const TimeStamp = styled.p``;
 
-const ListWrapper = styled.div``;
+const ListWrapper = styled.div`
+  list-style: none;
+`;
 
 const List = styled.ul``;
 
@@ -119,8 +121,10 @@ const Experience = () => {
             <Project style={{display: hideDefault ? "none" : "block"}}>
               <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
+                <Item>What is ToolJet:</Item>
+                <Item>ToolJet is an open-source low-code framework to build and deploy internal tools quickly without much effort from the engineering teams.</Item>
                 <List>
-                  <Item>Worked at #3181 issue. Default value in text widget deleted.</Item>
+                  <Item>Worked at <a href="https://github.com/ToolJet/ToolJet/issues/3181" target="_blank" style={{textDecoration:"none", color:"#00b4d8"}}>#3181</a> issue. Default value in text widget deleted.</Item>
                 </List>
               </ListWrapper>
             </Project>
