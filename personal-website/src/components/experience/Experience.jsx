@@ -85,15 +85,15 @@ const Experience = () => {
   
 
   const toggleHide = () => {
-    setHide(!hideDefault);
-  };
-  const toggleHide2 = () => {
-    setHide(!hideDefault);
-    setHide2(!hide2);
-  };
-  const toggleHide3 = () => {
-    setHide2(!hide2);
-    setHide3(!hide3);
+    if (!hideDefault) {
+      setHide(!hideDefault);
+      setHide2(!hide2);
+      
+    } else if (hideDefault){
+      setHide(!hideDefault);
+      setHide2(!hide2);
+      setHide3(!hide3);
+    }
   };
 
   return (
@@ -106,10 +106,10 @@ const Experience = () => {
             <LeftButton onClick={toggleHide}>
               ToolJet
             </LeftButton>
-            <LeftButton onClick={toggleHide2}>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton onClick={toggleHide3}>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
             <LeftButton onClick={toggleHide}>
