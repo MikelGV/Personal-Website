@@ -79,18 +79,18 @@ const Item = styled.li`
 `;
 
 const Experience = () => {
-  const [hideDefault, setHide] = useState(true);
+  const [hide, setHide] = useState(true);
   const [hide2, setHide2] = useState(false);
   const [hide3, setHide3] = useState(false);
   
 
   const toggleHide = () => {
-    if (!hideDefault) {
-      setHide(!hideDefault);
+    if (!hide) {
+      setHide(!hide);
       setHide2(!hide2);
       
-    } else if (hideDefault){
-      setHide(!hideDefault);
+    } else if (hide){
+      setHide(!hide);
       setHide2(!hide2);
       setHide3(!hide3);
     }
@@ -120,7 +120,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project style={{display: hideDefault ? "block" : "none"}}>
+            <Project style={{display: hide ? "block" : "none"}}>
               <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
                 <Item>What is ToolJet:</Item>
