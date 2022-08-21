@@ -84,17 +84,7 @@ const Experience = () => {
   const [hide3, setHide3] = useState(false);
   
 
-  const toggleHide = () => {
-    if (!hide) {
-      setHide(!hide);
-      setHide2(!hide2);
-      
-    } else if (hide){
-      setHide(!hide);
-      setHide2(!hide2);
-      setHide3(!hide3);
-    }
-  };
+  const toggleHide = () => {};
 
   return (
     <Container>
