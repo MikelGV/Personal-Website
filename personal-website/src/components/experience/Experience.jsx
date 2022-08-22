@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components';
 
 
@@ -79,9 +79,11 @@ const Item = styled.li`
 `;
 
 const Experience = () => {
-  const [hide, setHide] = useState(true);
+  const [hide, setHide] = useState(false);
   const [hide2, setHide2] = useState(false);
   const [hide3, setHide3] = useState(false);
+
+  const domRef = useRef();
   
 
   const toggleHide = () => {};
