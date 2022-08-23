@@ -8,6 +8,16 @@ const Container = styled.div`
   height: 90vh;
   align-items: center;
   justify-content: center;
+  transform: translateY(20vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease-out, transform 2.2s ease-out;
+  will-change: opacity, visibility;
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -79,17 +89,26 @@ const Item = styled.li`
 `;
 
 const Experience = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setIsVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+
   const [hide, setHide] = useState(false);
   const [hide2, setHide2] = useState(false);
   const [hide3, setHide3] = useState(false);
-
-  const domRef = useRef();
   
 
   const toggleHide = () => {};
 
   return (
-    <Container>
+    <Container id='Experince' ref={domRef} className={isVisible ? "is-visible" : ""}>
       <Wrapper>
         <Title>Experience & Open Source</Title>
         <Line/>
