@@ -100,12 +100,16 @@ const Experience = () => {
     return () => observer.unobserve(domRef.current);
   }, []);
 
-  const [hide, setHide] = useState(false);
-  const [hide2, setHide2] = useState(false);
-  const [hide3, setHide3] = useState(false);
-  
+  const [isActive, setIsActive] = useState(false);
+  const hideRef = useRef();
 
-  const toggleHide = () => {};
+  const toggleHide = () => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setIsActive(entry.isIntersecting));
+    });
+    observer.observe(hideRef.current);
+    return () => observer.unobserve(hideRef.current);
+  };
 
   return (
     <Container id='Experince' ref={domRef} className={isVisible ? "is-visible" : ""}>
@@ -114,16 +118,16 @@ const Experience = () => {
         <Line/>
         <ExperienceWrapper>
           <Left>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton ref={hideRef} onClick={toggleHide}>
               ToolJet
             </LeftButton>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton ref={hideRef} onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton ref={hideRef} onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton ref={hideRef} onClick={toggleHide}>
               TEST
             </LeftButton>
             <LeftButton onClick={toggleHide}>
@@ -131,7 +135,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project style={{display: hide ? "block" : "none"}}>
+            <Project style={{display: isActive ? "none" : "block"}}>
               <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
                 <Item>What is ToolJet:</Item>
@@ -141,7 +145,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: hide2 ? "block" : "none"}}>
+            <Project style={{display: isActive ? "block" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
@@ -150,7 +154,7 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: hide3 ? "block" : "none"}}>
+            <Project style={{display: isActive ? "block" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
