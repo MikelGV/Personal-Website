@@ -101,14 +101,9 @@ const Experience = () => {
   }, []);
 
   const [isActive, setIsActive] = useState(false);
-  const hideRef = useRef();
 
   const toggleHide = () => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setIsActive(entry.isIntersecting));
-    });
-    observer.observe(hideRef.current);
-    return () => observer.unobserve(hideRef.current);
+    setIsActive(true);
   };
 
   return (
@@ -118,16 +113,16 @@ const Experience = () => {
         <Line/>
         <ExperienceWrapper>
           <Left>
-            <LeftButton ref={hideRef} onClick={toggleHide}>
+            <LeftButton onClick={toggleHide}>
               ToolJet
             </LeftButton>
-            <LeftButton ref={hideRef} onClick={toggleHide}>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton ref={hideRef} onClick={toggleHide}>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
-            <LeftButton ref={hideRef} onClick={toggleHide}>
+            <LeftButton onClick={toggleHide}>
               TEST
             </LeftButton>
             <LeftButton onClick={toggleHide}>
@@ -135,7 +130,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project style={{display: isActive ? "none" : "block"}}>
+            <Project style={ isActive ? {display: "none"} : {display: "block"}}>
               <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
                 <Item>What is ToolJet:</Item>
