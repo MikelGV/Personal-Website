@@ -130,7 +130,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project style={ isActive ? {display: "none"} : {display: "block"}}>
+            <Project style={ {display: isActive ? "none" : "block"}}>
               <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
                 <Item>What is ToolJet:</Item>
