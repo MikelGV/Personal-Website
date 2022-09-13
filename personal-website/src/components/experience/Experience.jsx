@@ -75,7 +75,11 @@ const RightTitle = styled.h3`
   color: #90e0ef;
 `;
 
-const TimeStamp = styled.p``;
+const TimeStamp = styled.p`
+  color: #90e0ef;
+  font-size: 15px;
+  font-weight: 300;
+`;
 
 const ListWrapper = styled.div`
   list-style: none;
@@ -100,10 +104,21 @@ const Experience = () => {
     return () => observer.unobserve(domRef.current);
   }, []);
 
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
 
   const toggleHide = () => {
-    setIsActive(true);
+    switch (isActive) {
+      case false:
+        setIsActive(false);
+        break;
+      case true:
+        setIsActive2(true);
+    
+      default:
+        setIsActive(false);
+    }
   };
 
   return (
@@ -117,7 +132,7 @@ const Experience = () => {
               ToolJet
             </LeftButton>
             <LeftButton onClick={toggleHide}>
-              TEST
+              Freelance
             </LeftButton>
             <LeftButton onClick={toggleHide}>
               TEST
@@ -130,7 +145,7 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Project style={ {display: isActive ? "none" : "block"}}>
+            <Project style={ {display: isActive ? "block" : "none"}}>
               <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
               <ListWrapper>
                 <Item>What is ToolJet:</Item>
@@ -140,16 +155,17 @@ const Experience = () => {
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: isActive ? "block" : "none"}}>
-              <RightTitle>Contributed at TEST</RightTitle>
+            <Project style={{display: isActive2 ? "block" : "none"}}>
+              <RightTitle>Worked as Freelancer</RightTitle>
+              <TimeStamp>January 2020 - June 2022</TimeStamp>
               <ListWrapper>
                 <List>
-                  <Item>Default value in text widget deleted.</Item>
-                  <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
+                  <Item>Providing a range of web development services to numberous clients on a freelance basis; from creating web apps to website builds and rebuilds.</Item>
+                  <Item>Key projects: Build of a E-commerce website (front and back end) using NodeJs and MongoDb</Item>
                 </List>
               </ListWrapper>
             </Project>
-            <Project style={{display: isActive ? "block" : "none"}}>
+            <Project style={{display: isActive3 ? "block" : "none"}}>
               <RightTitle>Contributed at TEST</RightTitle>
               <ListWrapper>
                 <List>
