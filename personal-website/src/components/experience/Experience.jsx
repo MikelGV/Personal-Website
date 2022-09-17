@@ -111,7 +111,8 @@ const Experience = () => {
   const toggleHide = () => {
     switch (isActive) {
       case false:
-        setIsActive(false);
+        setIsActive(true);
+        setIsActive2(false)
         break;
       case true:
         setIsActive2(true);
