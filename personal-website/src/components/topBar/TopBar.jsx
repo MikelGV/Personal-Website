@@ -71,7 +71,7 @@ const Button = styled.a`
   color: #caf0f8;
   cursor: pointer;
   text-decoration: none;
-  animation: 3s ${fadeIn} ease-in;
+  animation: 2s ${fadeIn} ease-in;
   :hover {
     color: #5bc0be;
     border-color: #5bc0be;
@@ -92,7 +92,7 @@ const TopBar = () => {
           <MenuItem href='#work'>Work</MenuItem>
           {/* <MenuItem>Experience</MenuItem> */}
           <MenuItem href='#Contact'>Contact</MenuItem>
-          <Button href='/assets/resume.pdf'>Resume</Button>
+          <Button href='/assets/resume.pdf' target="_blank">Resume</Button>
         </Right>
       </Wrapper>
     </Container>
