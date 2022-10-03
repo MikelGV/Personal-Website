@@ -104,22 +104,13 @@ const Experience = () => {
     observer.observe(domRef.current);
     return () => observer.unobserve(domRef.current);
   }, []);
-
-  const [isActive, setIsActive] = useState(true);
-  const [isActive2, setIsActive2] = useState(false);
+  const defaultDisplay = () => Array.from({length: 3}).fill(false);
+  const [displays, setDisplays] = useState(defaultDisplay());
 
   const toggleHide = () => {
-    switch (isActive) {
-      case false:
-        setIsActive(true);
-        setIsActive2(false)
-        break;
-      case true:
-        setIsActive2(true);
-    
-      default:
-        setIsActive(false);
-    }
+    const temp = defaultDisplay();
+    temp[id] = true;
+    setDisplays(temp);
   };
 
   return (
@@ -146,7 +137,9 @@ const Experience = () => {
             </LeftButton>
           </Left>
           <Right>
-            <Projects/>
+            {displays.map((display, i) => {
+              return <Projects display={display} id={i} onClick={toggleHide} />
+            })}
           </Right>
         </ExperienceWrapper>
       </Wrapper>
