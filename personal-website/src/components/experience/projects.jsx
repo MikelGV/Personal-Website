@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 
 
@@ -27,7 +27,12 @@ const Item = styled.li`
   margin-bottom: 5px;
 `;
 
-function Projects() {
+function Projects({display, id, toggleHide}) {
+  const [dp, setDp] = useState(display);
+
+  useEffect(() => {
+    setDp(display ? 'block' : 'none');
+  }, display)
   return (
         <Container>
             <Project id='0'>
