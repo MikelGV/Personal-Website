@@ -104,14 +104,27 @@ const Experience = () => {
     return () => observer.unobserve(domRef.current);
   }, []);
 
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
+
 
   const toggleHide = () => {
-    if (isActive == false) {
-      setIsActive(true);
-    } else {
-      setIsActive(false)
-    }
+    setIsActive(true);
+    setIsActive2(false);
+    setIsActive3(false);
+  }
+
+  const toggleHide2 = () => {
+    setIsActive(false);
+    setIsActive2(true);
+    setIsActive3(false);
+  }
+
+  const toggleHide3 = () => {
+    setIsActive(false);
+    setIsActive2(false);
+    setIsActive3(true);
   }
 
 
@@ -125,15 +138,15 @@ const Experience = () => {
             <LeftButton onClick={toggleHide}>
               ToolJet
             </LeftButton>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton onClick={toggleHide2}>
               Freelance
             </LeftButton>
-            <LeftButton onClick={toggleHide}>
+            <LeftButton onClick={toggleHide3}>
               TEST
             </LeftButton>
           </Left>
           <Right>
-            <Project id='0' style={ { display: isActive ? "none" : "block"}}>
+            <Project id='0' style={ { display: isActive ? "block" : "none"}}>
                   <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
                   <ListWrapper>
                   <Item>What is ToolJet:</Item>
@@ -143,7 +156,7 @@ const Experience = () => {
                   </List>
                   </ListWrapper>
               </Project>
-              <Project id='1' style={ { display: isActive ? "block" : "none"}}>
+              <Project id='1' style={ { display: isActive2 ? "block" : "none"}}>
                   <RightTitle>Worked as Freelancer</RightTitle>
                   <TimeStamp>January 2020 - June 2022</TimeStamp>
                   <ListWrapper>
@@ -153,7 +166,7 @@ const Experience = () => {
                   </List>
                   </ListWrapper>
               </Project>
-              <Project id='2' style={ { display: isActive ? "block" : "none"}}>
+              <Project id='2' style={ { display: isActive3 ? "block" : "none"}}>
                   <RightTitle>Contributed at TEST</RightTitle>
                   <ListWrapper>
                   <List>
