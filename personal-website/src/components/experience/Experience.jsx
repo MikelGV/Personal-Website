@@ -61,7 +61,6 @@ const LeftButton = styled.button`
   border-left: 3px solid #002855;
   color: #00b4d8;
   font-size: 19px;
-  margin-bottom: 15px;
   :hover {
     background-color: #001845;
   }
