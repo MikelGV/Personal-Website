@@ -96,10 +96,10 @@ export default function About() {
         </AboutWrapper>
         <TechnologyWrapper>
           <Technology>
-            <Tech>JavaScript (ES6+)</Tech>
-            <Tech>React</Tech>
-            <Tech>NodeJs</Tech>
+            <Tech>Golang</Tech>
+            <Tech>TypeScript</Tech>
             <Tech>Python</Tech>
+            <Tech>Docker</Tech>
           </Technology>
         </TechnologyWrapper>
       </Wrapper>
