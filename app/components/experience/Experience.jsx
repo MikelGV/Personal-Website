@@ -114,20 +114,20 @@ export default function Experience() {
   const toggleHide = () => {
     setIsActive(true);
     setIsActive2(false);
-    // setIsActive3(false);
+     setIsActive3(false);
   }
 
   const toggleHide2 = () => {
     setIsActive(false);
     setIsActive2(true);
-    // setIsActive3(false);
+     setIsActive3(false);
   }
 
-  // const toggleHide3 = () => {
-  //   setIsActive(false);
-  //   setIsActive2(false);
-  //   setIsActive3(true);
-  // }
+  const toggleHide3 = () => {
+     setIsActive(false);
+     setIsActive2(false);
+     setIsActive3(true);
+   }
 
 
   return (
@@ -142,6 +142,9 @@ export default function Experience() {
             </LeftButton>
             <LeftButton onClick={toggleHide2}>
               Freelance
+            </LeftButton> 
+            <LeftButton onClick={toggleHide3}>
+             Company
             </LeftButton>
             {/* <LeftButton onClick={toggleHide3}>
               TEST
