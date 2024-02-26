@@ -1,5 +1,6 @@
 'use client';
 import styled, {keyframes} from 'styled-components'
+import { Mobile } from '@/app/lib/responsive';
 
 const fadeIn = keyframes`
   0% {
@@ -19,6 +20,7 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   animation: 2s ${fadeIn} ease-in;
+  ${Mobile({width: "42%"})}
 `;
 
 const Wrapper = styled.div`

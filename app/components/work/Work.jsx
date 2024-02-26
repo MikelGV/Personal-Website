@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { Mobile } from '@/app/lib/responsive';
 
 const Container = styled.div`
   width: 100%;
@@ -19,7 +20,10 @@ const Container = styled.div`
     transform: none;
     visibility: visible;
   }
-  
+  ${Mobile({
+        width: "42%",
+        "margin-top": "40vh",
+  })}  
 `;
 
 const Wrapper = styled.div`

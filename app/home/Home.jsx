@@ -9,7 +9,7 @@ import Contact from '../components/contact/Contact'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  flex: 4;
+  flex: 1;
 `;
 
 export default function HomePage() {

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import emailjs from "@emailjs/browser"
+import { Mobile } from '@/app/lib/responsive';
 
 const Container = styled.div`
   width: 100%;
@@ -19,6 +20,11 @@ const Container = styled.div`
     transform: none;
     visibility: visible;
   }
+  ${Mobile({
+        width: "50%",
+        "margin-top": "40vh",
+        "margin-bottom": "50vh",
+  })}
 `;
 
 const Wrapper = styled.div`

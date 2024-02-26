@@ -1,4 +1,5 @@
 'use client';
+import { Mobile } from '@/app/lib/responsive';
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components';
 
@@ -19,6 +20,10 @@ const Container = styled.div`
     transform: none;
     visibility: visible;
   }
+  ${Mobile({ 
+      width: "42%",
+      "margin-top": "35vh",
+  })}
 `;
 
 const Wrapper = styled.div`
