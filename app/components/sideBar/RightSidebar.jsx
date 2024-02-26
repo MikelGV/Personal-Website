@@ -1,4 +1,5 @@
 'use client';
+import { Mobile } from '@/app/lib/responsive';
 import styled, {keyframes} from 'styled-components';
 
 
@@ -18,7 +19,7 @@ const Container = styled.div`
   max-width: 50px;
   position: sticky;
   animation: 1s ${fadeIn} ease-in;
-
+  ${Mobile({display: "none"})}
 `;
 
 const Wrapper = styled.div`

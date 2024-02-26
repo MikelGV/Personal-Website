@@ -3,6 +3,7 @@ import styled, {keyframes} from 'styled-components'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Mobile } from '@/app/lib/responsive';
 
 const fadeIn = keyframes`
   0% {
@@ -19,6 +20,7 @@ const Container = styled.div`
   top: 76vh;
   position: sticky;
   animation: 1s ${fadeIn} ease-in;
+  ${Mobile({display: "none"})}
 `;
 
 const Wrapper = styled.div`
