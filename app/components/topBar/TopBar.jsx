@@ -1,4 +1,5 @@
 'use client'
+import { Mobile } from '@/app/lib/responsive';
 import Link from 'next/link';
 import styled, {keyframes} from 'styled-components'
 
@@ -40,6 +41,7 @@ const Logo = styled.h1`
   :hover {
     color: #5bc0be;
   }
+  ${Mobile({display: "none"})}
 `;
 
 const Right = styled.div`
@@ -59,6 +61,7 @@ const MenuItem = styled.a`
   :hover {
     color: #5bc0be;
   }
+  ${Mobile({ "margin-left": "10px" })}
 `;
 
 const Button = styled.a`
