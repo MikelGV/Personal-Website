@@ -59,6 +59,13 @@ const ExperienceWrapper = styled.div`
 const Left = styled.div`
   width: 150px;
   float: left;
+  ${Mobile({ 
+      display: "flex",
+      float: "none", 
+      width: "400px",
+      "justify-content": "center",
+      "margin-left": "20px"
+  })}
 `;
 
 const LeftButton = styled.button`
@@ -76,6 +83,13 @@ const LeftButton = styled.button`
 const Right = styled.div`
   max-width: 350px;
   float: left;
+  ${Mobile({
+      display: "flex",
+      float: "none", 
+      width: "400px",
+      "justify-content": "center",
+      "margin-left": "80px"
+  })}
 `;
 
 const RightTitle = styled.h3`
