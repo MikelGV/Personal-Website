@@ -7,6 +7,7 @@ import { Mobile } from '@/app/lib/responsive';
 const Container = styled.div`
   width: 100%;
   height: 90vh;
+  margin-top: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;

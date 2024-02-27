@@ -70,11 +70,6 @@ export default function LeftSideBar() {
               <LinkedInIcon/>
             </ListItem>
           </ListItems>
-          <ListItems>
-            <ListItem href='https://www.instagram.com/mikelgaldosv' target="_blank">
-              <InstagramIcon/>
-            </ListItem>
-          </ListItems>
           <Line></Line>
         </List>
       </Wrapper>
