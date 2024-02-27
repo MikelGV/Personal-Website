@@ -120,6 +120,24 @@ export default function Work() {
       <Wrapper>
         <Title>Some  Things I've Built</Title>
         <Line />
+        <Project>
+            <ProjectLink href='' target='_blank'>
+                <ProjectImg src='/assets/TheCoffeeFinder.png' />
+            </ProjectLink>
+            <Info>
+                <ProjectTitle href=''>The CoffeeFinder</ProjectTitle>
+                <ProjectDesc> specialty coffee platform that scours various websites for product offerings. Technologies used:</ProjectDesc>
+                <ProjectTech>
+                    <Tech>Golang</Tech>
+                    <Tech>Nextjs</Tech>
+                    <Tech>Tailwind</Tech>
+                    <Tech>Docker</Tech>
+                </ProjectTech>
+                <ProjectLink href="https://github.com/MikelGV/SpecialtyCoffeeCrawler/" target='_blank'>
+                    <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
+                </ProjectLink>
+            </Info>
+        </Project>
           <Project>
             <ProjectLink href='' target='_blank'>
               <ProjectImg src='/assets/SocialMedia.png' />
@@ -156,26 +174,7 @@ export default function Work() {
                 <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
               </ProjectLink>
             </Info>
-          </Project>
-          <Project>
-          <ProjectLink href='' target='_blank'>
-            <ProjectImg src='/assets/TheCoffeeFinder.png' />
-          </ProjectLink>
-            <Info>
-              <ProjectTitle href=''>SpecialtyCoffeeCrawler</ProjectTitle>
-              <ProjectDesc> specialty coffee platform that scours various websites for product offerings. Technologies used:</ProjectDesc>
-              <ProjectTech>
-                <Tech>Golang</Tech>
-                <Tech>Nextjs</Tech>
-                <Tech>Tailwind</Tech>
-                <Tech>Docker</Tech>
-              </ProjectTech>
-              <ProjectLink href="https://github.com/MikelGV/SpecialtyCoffeeCrawler/" target='_blank'>
-                <GitHubIcon style={{color: "white", marginLeft: 10, marginTop: 10}}/>
-              </ProjectLink>
-            </Info>
-          </Project>
- 
+        </Project>
       </Wrapper>
     </Container>
   )
