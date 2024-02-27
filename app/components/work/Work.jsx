@@ -61,6 +61,7 @@ const ProjectImg = styled.img`
   height: 30vh;
   object-fit: cover;
   cursor: pointer;
+  ${Mobile({ display: "none" })}
 `;
 const Info = styled.div`
   margin-left: 10px;
