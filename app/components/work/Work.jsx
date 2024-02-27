@@ -158,7 +158,7 @@ export default function Work() {
           </Project>
           <Project>
           <ProjectLink href='' target='_blank'>
-            <ProjectImg src='/assets/SpecialtyCoffeeCrawler.png' />
+            <ProjectImg src='/assets/TheCoffeeFinder.png' />
           </ProjectLink>
             <Info>
               <ProjectTitle href=''>SpecialtyCoffeeCrawler</ProjectTitle>
