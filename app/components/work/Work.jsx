@@ -125,7 +125,9 @@ export default function Work() {
             </ProjectLink>
             <Info>
               <ProjectTitle href=''>Social Media</ProjectTitle>
-              <ProjectDesc>Social Media app that replicates the core Facebook functionalities, like posting photos and following other users. Technologies used:</ProjectDesc>
+              <ProjectDesc> 
+                A social networking platform designed to mirror essential features of Facebook, such as image sharing and user following, tailored for corporate use. Technologies used:
+              </ProjectDesc>
               <ProjectTech>
                 <Tech>Express</Tech>
                 <Tech>React</Tech>
@@ -142,7 +144,7 @@ export default function Work() {
           </ProjectLink>
             <Info>
               <ProjectTitle href=''>E-shop</ProjectTitle>
-              <ProjectDesc>Web app for buying and selling clothes. Technologies used:</ProjectDesc>
+              <ProjectDesc>A business-oriented web-application for users, enbaling the purchase and sale of clothing itmes. Technologies used:</ProjectDesc>
               <ProjectTech>
                 <Tech>Express</Tech>
                 <Tech>React</Tech>
@@ -160,7 +162,7 @@ export default function Work() {
           </ProjectLink>
             <Info>
               <ProjectTitle href=''>SpecialtyCoffeeCrawler</ProjectTitle>
-              <ProjectDesc>A specialty coffee page that crawls websites for products</ProjectDesc>
+              <ProjectDesc> specialty coffee platform that scours various websites for product offerings. Technologies used:</ProjectDesc>
               <ProjectTech>
                 <Tech>Golang</Tech>
                 <Tech>Nextjs</Tech>
