@@ -163,11 +163,8 @@ export default function Experience() {
             <LeftButton onClick={toggleHide2}>
               Freelance
             </LeftButton> 
-            <LeftButton onClick={toggleHide3}>
-             Company
-            </LeftButton>
             {/* <LeftButton onClick={toggleHide3}>
-              TEST
+              Company
             </LeftButton> */}
           </Left>
           <Right>
@@ -191,15 +188,15 @@ export default function Experience() {
                   </List>
                   </ListWrapper>
               </Project>
-              <Project id='2' style={ { display: isActive3 ? "block" : "none"}}>
-                  <RightTitle>Contributed at TEST</RightTitle>
-                  <ListWrapper>
-                  <List>
-                      <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
-                      <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
-                  </List>
-                  </ListWrapper>
-              </Project>
+              //<Project id='2' style={ { display: isActive3 ? "block" : "none"}}>
+                  //<RightTitle>Contributed at TEST</RightTitle>
+                  //<ListWrapper>
+                  //<List>
+                     // <Item>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Item>
+                      //<Item>Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati impedit voluptate aliquid. netflix, youtube, twitter.</Item>
+                  //</List>
+                  //</ListWrapper>
+              //</Project>
           </Right>
         </ExperienceWrapper>
       </Wrapper>
