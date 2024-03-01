@@ -14,8 +14,8 @@ export const sendEmail = async (prevState, formData) => {
     try {
         const resend = new Resend(process.env.RESEND_API_KEY)
         await resend.emails.send({
-            from: "Mikel <mikelgaldosv@gmail.com>",
-            to: email,
+            from: email,
+            to: "Mikel <mikelgaldosv@gmail.com>",
             subject: subject,
             html: render(EmailTemplate({ name, email, message}))
         })

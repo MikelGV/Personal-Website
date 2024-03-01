@@ -1,4 +1,3 @@
-'use client';
 import { Html, Heading, Text } from "@react-email/components";
 
 const EmailTemplate = ({
