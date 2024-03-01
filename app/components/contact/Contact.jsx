@@ -1,8 +1,9 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import emailjs from "@emailjs/browser"
 import { Mobile } from '@/app/lib/responsive';
+import { useFormState } from 'react-dom';
+import { sendEmail } from '@/actions';
 
 const Container = styled.div`
   width: 100%;
@@ -131,8 +132,6 @@ const Button = styled.button`
   }
 `;
 
-const PUBLIC_KEYS = process.env.REACT_APP_PUBLIC_KEY;
-const TEMPLATE_KEYS = process.env.REACT_APP_TEMPLATE_KEY;
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -146,24 +145,25 @@ export default function Contact() {
     return () => observer.unobserve(domRef.current);
   }, []);
 
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const [sendEmailState, sendEmailAction] = useFormState(sendEmail)
+ 
+  useEffect(() => {
+    if(sendEmailState == true) {
+        alert("email sent")
+    }
+    if(sendEmailState == false) {
+        alert("Error sending email!")
+    }
+    console.log("send")
+  }, [sendEmailState])
 
-    emailjs.sendForm('gmail', `${TEMPLATE_KEYS}`, form.current, `${PUBLIC_KEYS}`)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
   return (
     <Container id='Contact' ref={domRef} className={isVisible ? "is-visible" : ""}>
       <Wrapper>
         <FormWrapper>
           <ContactMe>Contact</ContactMe>
           <Line></Line>
-          <Form ref={form} onSubmit={sendEmail}>
+          <Form action={sendEmailAction}>
             <Name placeholder='Name' name='name'/>
             <Email placeholder='Email' name='email'/>
             <Subject placeholder='Subject' name='subject'/>
