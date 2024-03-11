@@ -119,7 +119,7 @@ export default function Work() {
   return (
     <Container id='work' ref={{domRef}} className={{isVisible} ? "is-visible" : ""}>
       <Wrapper>
-        <Title>Some  Things I've Built</Title>
+        <Title>Some  Things {`I've`} Built</Title>
         <Line />
         <Project>
             <ProjectLink href='https://specialtycoffeecrawler.onrender.com/' target='_blank'>

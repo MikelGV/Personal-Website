@@ -169,7 +169,7 @@ export default function Experience() {
             </LeftButton> */}
           </Left>
           <Right>
-            <Project id='0' style={ { display: isActive ? "block" : "none"}}>
+            <Project id='0' style={ { display: {isActive} ? "block" : "none"}}>
                   <RightTitle>Contributed at <a href="https://www.tooljet.com/" target="_blank" style={{textDecoration: "none", color:"#90e0ef"}}>ToolJet</a></RightTitle>
                   <ListWrapper>
                   <Item>What is ToolJet:</Item>
@@ -179,7 +179,7 @@ export default function Experience() {
                   </List>
                   </ListWrapper>
               </Project>
-              <Project id='1' style={ { display: isActive2 ? "block" : "none"}}>
+              <Project id='1' style={ { display: {isActive2} ? "block" : "none"}}>
                   <RightTitle>Worked as Freelancer</RightTitle>
                   <TimeStamp>January 2020 - June 2022</TimeStamp>
                   <ListWrapper>
@@ -189,7 +189,7 @@ export default function Experience() {
                   </List>
                   </ListWrapper>
               </Project>
-              //<Project id='2' style={ { display: isActive3 ? "block" : "none"}}>
+              //<Project id='2' style={ { display: {isActive3} ? "block" : "none"}}>
                   //<RightTitle>Contributed at TEST</RightTitle>
                   //<ListWrapper>
                   //<List>

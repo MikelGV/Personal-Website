@@ -69,7 +69,7 @@ export default function Landing() {
                 <Title>Hi, my name is</Title>
                 <Title2>Mikel Galdos.</Title2>
                 <Title3>I build things for the web.</Title3>
-                <Title4>I'm a software developer who builds exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.</Title4>
+                <Title4>{`I'm`} a software developer who builds exceptional digital experiences. Currently, {`I'm`} focused on building accessible, human-centered products.</Title4>
             </TitleContainer>
         </Wrapper>
     </Container>
