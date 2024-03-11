@@ -121,11 +121,11 @@ export default function Work() {
         <Title>Some  Things I've Built</Title>
         <Line />
         <Project>
-            <ProjectLink href='' target='_blank'>
+            <ProjectLink href='https://specialtycoffeecrawler.onrender.com/' target='_blank'>
                 <ProjectImg src='/assets/TheCoffeeFinder.png' />
             </ProjectLink>
             <Info>
-                <ProjectTitle href=''>The CoffeeFinder</ProjectTitle>
+                <ProjectTitle href='https://specialtycoffeecrawler.onrender.com/'>The CoffeeFinder</ProjectTitle>
                 <ProjectDesc> specialty coffee platform that scours various websites for product offerings. Technologies used:</ProjectDesc>
                 <ProjectTech>
                     <Tech>Golang</Tech>
