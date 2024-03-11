@@ -189,6 +189,7 @@ export default function Experience() {
                   </List>
                   </ListWrapper>
               </Project>
+      {/*
               //<Project id='2' style={ { display: {isActive3} ? "block" : "none"}}>
                   //<RightTitle>Contributed at TEST</RightTitle>
                   //<ListWrapper>
@@ -198,6 +199,7 @@ export default function Experience() {
                   //</List>
                   //</ListWrapper>
               //</Project>
+        */}
           </Right>
         </ExperienceWrapper>
       </Wrapper>
