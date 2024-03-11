@@ -109,14 +109,15 @@ export default function Work() {
   const domRef = useRef();
 
   useEffect(() => {
+    const ref = domRef.current
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setIsVisible(entry.isIntersecting));
     });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
+    observer.observe(ref);
+    return () => observer.unobserve(ref);
   }, []);
   return (
-    <Container id='work' ref={domRef} className={isVisible ? "is-visible" : ""}>
+    <Container id='work' ref={{domRef}} className={{isVisible} ? "is-visible" : ""}>
       <Wrapper>
         <Title>Some  Things I've Built</Title>
         <Line />
