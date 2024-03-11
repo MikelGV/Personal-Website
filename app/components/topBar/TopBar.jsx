@@ -95,7 +95,7 @@ export default function Topbar() {
           <MenuItem href='#work'>Work</MenuItem>
           {/* <MenuItem>Experience</MenuItem> */}
           <MenuItem href='#Contact'>Contact</MenuItem>
-          <Button href='/assets/resume.pdf' target="_blank">Resume</Button>
+          <Button href='./assets/resume.pdf' target="_blank">Resume</Button>
         </Right>
       </Wrapper>
     </Container>

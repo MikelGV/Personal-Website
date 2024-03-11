@@ -122,7 +122,7 @@ export default function Work() {
         <Line />
         <Project>
             <ProjectLink href='https://specialtycoffeecrawler.onrender.com/' target='_blank'>
-                <ProjectImg src='/assets/TheCoffeeFinder.png' />
+                <ProjectImg src='./assets/TheCoffeeFinder.png' />
             </ProjectLink>
             <Info>
                 <ProjectTitle href='https://specialtycoffeecrawler.onrender.com/'>The CoffeeFinder</ProjectTitle>
@@ -140,7 +140,7 @@ export default function Work() {
         </Project>
           <Project>
             <ProjectLink href='' target='_blank'>
-              <ProjectImg src='/assets/SocialMedia.png' />
+              <ProjectImg src='./assets/SocialMedia.png' />
             </ProjectLink>
             <Info>
               <ProjectTitle href=''>Social Media</ProjectTitle>
@@ -159,7 +159,7 @@ export default function Work() {
           </Project>
           <Project>
           <ProjectLink href='' target='_blank'>
-            <ProjectImg src='/assets/E-shop.png' />
+            <ProjectImg src='./assets/E-shop.png' />
           </ProjectLink>
             <Info>
               <ProjectTitle href=''>E-shop</ProjectTitle>
