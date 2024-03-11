@@ -82,16 +82,17 @@ export default function About() {
   const domRef = useRef();
 
   useEffect(() => {
+    const ref = domRef.current
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setIsVisible(entry.isIntersecting));
     });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
+    observer.observe(ref);
+    return () => observer.unobserve(ref);
   }, []);
 
   return (
     <Container id='about'>
-      <Wrapper ref={domRef} className={isVisible ? "is-visible" : ""}>
+      <Wrapper ref={{domRef}} className={{isVisible} ? "is-visible" : ""}>
         <Title>About</Title>
         <Line></Line>
         <AboutWrapper>
