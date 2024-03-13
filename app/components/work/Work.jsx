@@ -117,16 +117,16 @@ export default function Work() {
     return () => observer.unobserve(ref);
   }, []);
   return (
-    <Container id='work' ref={{domRef}} className={{isVisible} ? "is-visible" : ""}>
+    <Container id='work' ref={domRef} className={isVisible ? "is-visible" : ""}>
       <Wrapper>
         <Title>Some  Things {`I've`} Built</Title>
         <Line />
         <Project>
-            <ProjectLink href='https://specialtycoffeecrawler.onrender.com/' target='_blank'>
+            <ProjectLink href='https://github.com/MikelGV/SpecialtyCoffeeCrawler' target='_blank'>
                 <ProjectImg src='./assets/TheCoffeeFinder.png' />
             </ProjectLink>
             <Info>
-                <ProjectTitle href='https://specialtycoffeecrawler.onrender.com/'>The CoffeeFinder</ProjectTitle>
+                <ProjectTitle href='https://github.com/MikelGV/SpecialtyCoffeeCrawler' target='_blank'>The CoffeeFinder</ProjectTitle>
                 <ProjectDesc> specialty coffee platform that scours various websites for product offerings. Technologies used:</ProjectDesc>
                 <ProjectTech>
                     <Tech>Golang</Tech>
@@ -140,11 +140,11 @@ export default function Work() {
             </Info>
         </Project>
           <Project>
-            <ProjectLink href='' target='_blank'>
+            <ProjectLink href='https://github.com/MikelGV/Social-Media' target='_blank'>
               <ProjectImg src='./assets/SocialMedia.png' />
             </ProjectLink>
             <Info>
-              <ProjectTitle href=''>Social Media</ProjectTitle>
+              <ProjectTitle href='https://github.com/MikelGV/Social-Media' target='_blank'>Social Media</ProjectTitle>
               <ProjectDesc> 
                 A social networking platform designed to mirror essential features of Facebook, such as image sharing and user following, tailored for corporate use. Technologies used:
               </ProjectDesc>
@@ -159,11 +159,11 @@ export default function Work() {
             </Info>
           </Project>
           <Project>
-          <ProjectLink href='' target='_blank'>
+          <ProjectLink href='https://github.com/MikelGV/e-commerce-front-end' target='_blank'>
             <ProjectImg src='./assets/E-shop.png' />
           </ProjectLink>
             <Info>
-              <ProjectTitle href=''>E-shop</ProjectTitle>
+              <ProjectTitle href='https://github.com/MikelGV/e-commerce-front-end' target='_blank'>E-shop</ProjectTitle>
               <ProjectDesc>A business-oriented web-application for users, enbaling the purchase and sale of clothing itmes. Technologies used:</ProjectDesc>
               <ProjectTech>
                 <Tech>Express</Tech>
