@@ -74,6 +74,7 @@ const LeftButton = styled.button`
   border: none;
   background-color: #001233;
   border-left: 3px solid #002855;
+  cursor: pointer;
   color: #00b4d8;
   font-size: 19px;
   :hover {
