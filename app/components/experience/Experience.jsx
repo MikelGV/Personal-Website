@@ -152,7 +152,7 @@ export default function Experience() {
 
 
   return (
-    <Container id='Experince' ref={{domRef}} className={{isVisible} ? "is-visible" : ""}>
+    <Container id='Experince' ref={domRef} className={isVisible ? "is-visible" : ""}>
       <Wrapper>
         <Title>Experience & Open Source</Title>
         <Line/>

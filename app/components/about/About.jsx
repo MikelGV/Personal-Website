@@ -92,7 +92,7 @@ export default function About() {
 
   return (
     <Container id='about'>
-      <Wrapper ref={{domRef}} className={{isVisible} ? "is-visible" : ""}>
+      <Wrapper ref={domRef} className={isVisible ? "is-visible" : ""}>
         <Title>About</Title>
         <Line></Line>
         <AboutWrapper>

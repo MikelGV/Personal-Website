@@ -117,16 +117,16 @@ export default function Work() {
     return () => observer.unobserve(ref);
   }, []);
   return (
-    <Container id='work' ref={{domRef}} className={{isVisible} ? "is-visible" : ""}>
+    <Container id='work' ref={domRef} className={isVisible ? "is-visible" : ""}>
       <Wrapper>
         <Title>Some  Things {`I've`} Built</Title>
         <Line />
         <Project>
-            <ProjectLink href='https://specialtycoffeecrawler.onrender.com/' target='_blank'>
+            <ProjectLink href='' target='_blank'>
                 <ProjectImg src='./assets/TheCoffeeFinder.png' />
             </ProjectLink>
             <Info>
-                <ProjectTitle href='https://specialtycoffeecrawler.onrender.com/'>The CoffeeFinder</ProjectTitle>
+                <ProjectTitle href=''>The CoffeeFinder</ProjectTitle>
                 <ProjectDesc> specialty coffee platform that scours various websites for product offerings. Technologies used:</ProjectDesc>
                 <ProjectTech>
                     <Tech>Golang</Tech>
